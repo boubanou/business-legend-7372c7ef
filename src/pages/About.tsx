@@ -23,12 +23,39 @@ const About = () => {
               {t("about.subtitle")}
             </p>
 
-            {/* Mission */}
-            <Card className="p-8 mb-12">
-              <h2 className="text-2xl font-bold mb-4">{t("about.missionTitle")}</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                {t("about.missionText")}
+            {/* Introduction */}
+            <div className="mb-12 text-center">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                {t("about.introTitle")}
+              </h2>
+              <p className="text-xl text-foreground/90 italic">
+                {t("about.introText")}
               </p>
+            </div>
+
+            {/* Main Content */}
+            <Card className="p-8 md:p-12 mb-12">
+              <div className="prose prose-lg max-w-none">
+                {t("about.mainText").split('\n\n').map((paragraph, index) => (
+                  <p key={index} className="text-lg text-muted-foreground leading-relaxed mb-6 last:mb-0">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </Card>
+
+            {/* Quote */}
+            <Card className="p-8 md:p-12 mb-12 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
+              <blockquote className="text-center">
+                <div className="text-2xl md:text-3xl font-bold mb-6 leading-relaxed">
+                  {t("about.quote").split('\n').map((line, index) => (
+                    <p key={index} className="mb-2">"{line}"</p>
+                  ))}
+                </div>
+                <footer className="text-lg text-muted-foreground">
+                  — {t("about.quoteAuthor")}
+                </footer>
+              </blockquote>
             </Card>
 
             {/* Host */}
@@ -36,15 +63,12 @@ const About = () => {
               <h2 className="text-2xl font-bold mb-8">{t("about.hostTitle")}</h2>
               
               <div className="max-w-md mx-auto mb-8">
-                <div className="w-48 h-48 mx-auto mb-6 rounded-full bg-muted flex items-center justify-center">
-                  <span className="text-4xl font-bold text-muted-foreground">GB</span>
+                <div className="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center">
+                  <span className="text-4xl font-bold text-primary">GB</span>
                 </div>
                 
                 <h3 className="text-2xl font-bold mb-2">{t("about.hostName")}</h3>
                 <p className="text-primary font-semibold mb-4">{t("about.hostRole")}</p>
-                <p className="text-muted-foreground leading-relaxed">
-                  {t("about.hostBio")}
-                </p>
               </div>
 
               <div className="flex justify-center gap-4 mt-8 text-sm text-muted-foreground">

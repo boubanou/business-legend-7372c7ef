@@ -24,13 +24,34 @@ const Home = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,107,0,0.1),transparent_50%)]" />
           
           <div className="container mx-auto px-4 text-center relative z-10">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-7xl font-bold text-secondary-foreground mb-6 leading-tight">
+            <div className="max-w-5xl mx-auto">
+              <h1 className="text-4xl md:text-6xl font-bold text-secondary-foreground mb-6 leading-tight">
                 {t("home.heroTitle")}
               </h1>
-              <p className="text-xl md:text-2xl text-secondary-foreground/90 mb-12 max-w-2xl mx-auto">
+              <p className="text-2xl md:text-3xl text-secondary-foreground font-semibold mb-8 italic">
                 {t("home.heroSubtitle")}
               </p>
+              
+              <div className="max-w-3xl mx-auto mb-8">
+                {t("home.heroText").split('\n\n').map((paragraph, index) => (
+                  <p key={index} className="text-lg md:text-xl text-secondary-foreground/90 mb-4 leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+
+              {/* Hero Features */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-10">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                  <p className="text-secondary-foreground text-sm md:text-base">{t("home.heroFeatures.platforms")}</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                  <p className="text-secondary-foreground text-sm md:text-base">{t("home.heroFeatures.bilingual")}</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                  <p className="text-secondary-foreground text-sm md:text-base">{t("home.heroFeatures.exclusive")}</p>
+                </div>
+              </div>
 
               {/* Video Embed Placeholder */}
               <div className="aspect-video max-w-3xl mx-auto mb-8 rounded-xl overflow-hidden shadow-2xl bg-black/20 backdrop-blur-sm border border-white/10">
@@ -56,6 +77,18 @@ const Home = () => {
                   </Button>
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Vision Section */}
+        <section className="py-16 bg-gradient-to-br from-primary/5 to-primary/10">
+          <div className="container mx-auto px-4 max-w-4xl text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">{t("home.visionTitle")}</h2>
+            <div className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              {t("home.visionText").split('\n').map((line, index) => (
+                <p key={index} className="mb-3">{line}</p>
+              ))}
             </div>
           </div>
         </section>
