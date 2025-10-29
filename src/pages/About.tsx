@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { Card } from "@/components/ui/card";
+import gregoryBrenig from "@/assets/gregory-brenig.jpg";
 
 const About = () => {
   const { t, i18n } = useTranslation();
@@ -65,7 +66,7 @@ const About = () => {
               <div className="max-w-md mx-auto mb-8">
                 <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20">
                   <img 
-                    src={require("@/assets/gregory-brenig.jpg")} 
+                    src={gregoryBrenig} 
                     alt="Gregory Brenig" 
                     className="w-full h-full object-cover"
                   />
