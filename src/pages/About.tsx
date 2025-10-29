@@ -14,7 +14,7 @@ const About = () => {
         <html lang={i18n.language} />
       </Helmet>
 
-      <div className="min-h-screen pt-20">
+      <div className="min-h-screen pt-28">
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4 max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
@@ -72,16 +72,18 @@ const About = () => {
                   />
                 </div>
                 
-                <h3 className="text-2xl font-bold mb-2">{t("about.hostName")}</h3>
+                <a href="https://www.linkedin.com/in/gregory-brenig-98007125/" target="_blank" rel="noopener noreferrer" className="block">
+                  <h3 className="text-2xl font-bold mb-2 hover:text-primary transition-colors cursor-pointer">{t("about.hostName")}</h3>
+                </a>
                 <p className="text-primary font-semibold mb-4">{t("about.hostRole")}</p>
               </div>
 
               <div className="flex justify-center gap-4 mt-8 text-sm text-muted-foreground">
-                <a href="https://blocktech.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <a href="https://block-tech.co" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                   Block Tech
                 </a>
                 <span>•</span>
-                <a href="https://nlgconsulting.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <a href="https://nlgconsulting.co" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                   NLG Consulting
                 </a>
               </div>
