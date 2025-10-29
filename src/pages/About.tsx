@@ -63,8 +63,12 @@ const About = () => {
               <h2 className="text-2xl font-bold mb-8">{t("about.hostTitle")}</h2>
               
               <div className="max-w-md mx-auto mb-8">
-                <div className="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center">
-                  <span className="text-4xl font-bold text-primary">GB</span>
+                <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20">
+                  <img 
+                    src={require("@/assets/gregory-brenig.jpg")} 
+                    alt="Gregory Brenig" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 <h3 className="text-2xl font-bold mb-2">{t("about.hostName")}</h3>

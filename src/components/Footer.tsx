@@ -17,7 +17,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">{t("footer.platforms")}</h4>
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://open.spotify.com"
+                href="https://lnkd.in/dUB74jMq"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
@@ -26,7 +26,7 @@ const Footer = () => {
                 <Music className="h-5 w-5" />
               </a>
               <a
-                href="https://www.deezer.com"
+                href="https://lnkd.in/d6GA8CkM"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
@@ -35,7 +35,7 @@ const Footer = () => {
                 <Music className="h-5 w-5" />
               </a>
               <a
-                href="https://music.amazon.com"
+                href="https://lnkd.in/dhsBJyNR"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
@@ -44,7 +44,7 @@ const Footer = () => {
                 <Music className="h-5 w-5" />
               </a>
               <a
-                href="https://www.youtube.com"
+                href="https://lnkd.in/d6zMHEW5"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
@@ -53,13 +53,13 @@ const Footer = () => {
                 <Youtube className="h-5 w-5" />
               </a>
               <a
-                href="https://www.linkedin.com"
+                href="https://lnkd.in/dPavRt9k"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
-                aria-label="LinkedIn"
+                aria-label="Apple Podcasts"
               >
-                <Linkedin className="h-5 w-5" />
+                <Music className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -69,7 +69,7 @@ const Footer = () => {
               Produced by <strong>Gregory Brenig</strong>
             </p>
             <p className="text-sm mt-2 opacity-75">
-              Powered by <strong>Block Tech</strong>
+              Powered by <strong>NLG Consulting</strong>
             </p>
           </div>
         </div>

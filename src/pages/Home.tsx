@@ -20,7 +20,7 @@ const Home = () => {
 
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-secondary via-secondary to-accent overflow-hidden">
+        <section className="relative pt-24 pb-16 flex items-center justify-center bg-gradient-to-br from-secondary via-secondary to-accent overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,107,0,0.1),transparent_50%)]" />
           
           <div className="container mx-auto px-4 text-center relative z-10">
@@ -40,29 +40,19 @@ const Home = () => {
                 ))}
               </div>
 
-              {/* Hero Features */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-10">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                  <p className="text-secondary-foreground text-sm md:text-base">{t("home.heroFeatures.platforms")}</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                  <p className="text-secondary-foreground text-sm md:text-base">{t("home.heroFeatures.bilingual")}</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                  <p className="text-secondary-foreground text-sm md:text-base">{t("home.heroFeatures.exclusive")}</p>
-                </div>
-              </div>
-
-              {/* Video Embed Placeholder */}
-              <div className="aspect-video max-w-3xl mx-auto mb-8 rounded-xl overflow-hidden shadow-2xl bg-black/20 backdrop-blur-sm border border-white/10">
-                <div className="w-full h-full flex items-center justify-center text-secondary-foreground/60">
-                  <div className="text-center">
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
-                      <div className="w-0 h-0 border-l-[20px] border-l-primary border-y-[12px] border-y-transparent ml-1" />
-                    </div>
-                    <p className="text-sm">YouTube video embed placeholder</p>
-                  </div>
-                </div>
+              {/* YouTube Video Embed */}
+              <div className="aspect-video max-w-3xl mx-auto mb-8 rounded-xl overflow-hidden shadow-2xl">
+                <iframe 
+                  width="100%" 
+                  height="100%" 
+                  src="https://www.youtube.com/embed/xlnCbeBAehY?si=buIDmp0JdXfbWX0M" 
+                  title="Business Legend Podcast" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                  className="w-full h-full"
+                />
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -123,6 +113,23 @@ const Home = () => {
             </div>
 
             <div className="text-center mt-16">
+              <div className="flex justify-center gap-6 mb-4">
+                <a href="https://lnkd.in/dUB74jMq" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  Spotify
+                </a>
+                <a href="https://lnkd.in/dPavRt9k" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  Apple Podcasts
+                </a>
+                <a href="https://lnkd.in/d6GA8CkM" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  Deezer
+                </a>
+                <a href="https://lnkd.in/dhsBJyNR" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  Amazon Music
+                </a>
+                <a href="https://lnkd.in/d6zMHEW5" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  YouTube
+                </a>
+              </div>
               <p className="text-muted-foreground">{t("home.poweredBy")}</p>
             </div>
           </div>
