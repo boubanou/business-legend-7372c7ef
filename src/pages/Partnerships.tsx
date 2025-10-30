@@ -43,7 +43,7 @@ const Partnerships = () => {
               <Button variant="hero" size="lg">
                 {t("partnerships.requestKit")}
               </Button>
-              <Button variant="outline" size="lg" className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
+              <Button variant="outline" size="lg" className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-secondary">
                 {t("partnerships.bookCall")}
               </Button>
             </div>
@@ -133,7 +133,7 @@ const Partnerships = () => {
               <Button variant="hero" size="lg">
                 {t("partnerships.requestKit")}
               </Button>
-              <Button variant="outline" size="lg" className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
+              <Button variant="outline" size="lg" className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-secondary">
                 {t("partnerships.bookCall")}
               </Button>
             </div>
