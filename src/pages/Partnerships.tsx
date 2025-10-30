@@ -31,12 +31,12 @@ const Partnerships = () => {
 
       <div className="min-h-screen pt-20">
         {/* Hero */}
-        <section className="py-20 bg-gradient-to-br from-secondary via-secondary to-accent text-secondary-foreground">
+        <section className="py-12 md:py-20 bg-gradient-to-br from-secondary via-secondary to-accent text-secondary-foreground">
           <div className="container mx-auto px-4 max-w-4xl text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
               {t("partnerships.heroTitle")}
             </h1>
-            <p className="text-lg md:text-xl opacity-90 mb-8">
+            <p className="text-base sm:text-lg md:text-xl opacity-90 mb-6 md:mb-8">
               {t("partnerships.heroSubtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -58,39 +58,39 @@ const Partnerships = () => {
         </section>
 
         {/* Why Partner */}
-        <section className="py-20 bg-background">
+        <section className="py-12 md:py-20 bg-background">
           <div className="container mx-auto px-4 max-w-5xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16">
               {t("partnerships.whyPartner")}
             </h2>
 
-            <div className="space-y-12">
+            <div className="space-y-8 md:space-y-12">
               <div>
-                <h3 className="text-2xl font-bold mb-4">{t("partnerships.premiumTitle")}</h3>
-                <p className="text-lg text-muted-foreground">{t("partnerships.premiumText")}</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 md:mb-4">{t("partnerships.premiumTitle")}</h3>
+                <p className="text-base sm:text-lg text-muted-foreground">{t("partnerships.premiumText")}</p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold mb-4">{t("partnerships.narrativeTitle")}</h3>
-                <p className="text-lg text-muted-foreground">{t("partnerships.narrativeText")}</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 md:mb-4">{t("partnerships.narrativeTitle")}</h3>
+                <p className="text-base sm:text-lg text-muted-foreground">{t("partnerships.narrativeText")}</p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold mb-4">{t("partnerships.formatTitle")}</h3>
-                <p className="text-lg text-muted-foreground">{t("partnerships.formatText")}</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 md:mb-4">{t("partnerships.formatTitle")}</h3>
+                <p className="text-base sm:text-lg text-muted-foreground">{t("partnerships.formatText")}</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Formats */}
-        <section className="py-20 bg-muted">
+        <section className="py-12 md:py-20 bg-muted">
           <div className="container mx-auto px-4 max-w-5xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16">
               {t("partnerships.formats")}
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
               {formats.map((format, index) => (
                 <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-start gap-4">
@@ -107,13 +107,13 @@ const Partnerships = () => {
         </section>
 
         {/* Process */}
-        <section className="py-20 bg-background">
+        <section className="py-12 md:py-20 bg-background">
           <div className="container mx-auto px-4 max-w-5xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16">
               {t("partnerships.process")}
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {steps.map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold">
@@ -128,12 +128,12 @@ const Partnerships = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-20 bg-gradient-to-br from-secondary via-secondary to-accent text-secondary-foreground">
+        <section className="py-12 md:py-20 bg-gradient-to-br from-secondary via-secondary to-accent text-secondary-foreground">
           <div className="container mx-auto px-4 max-w-3xl text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
               {t("partnerships.ctaTitle")}
             </h2>
-            <p className="text-lg md:text-xl opacity-90 mb-8">
+            <p className="text-base sm:text-lg md:text-xl opacity-90 mb-6 md:mb-8">
               {t("partnerships.ctaText")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

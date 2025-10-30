@@ -25,7 +25,7 @@ const Header = () => {
           </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-8">
           <Link
             to="/"
             className={`text-sm font-medium transition-colors hover:text-primary ${
