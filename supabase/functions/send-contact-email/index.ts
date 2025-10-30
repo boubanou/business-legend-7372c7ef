@@ -35,7 +35,7 @@ Deno.serve(async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         from: "Business Legend <onboarding@resend.dev>",
-        to: ["greg@nlgconsulting.co"],
+        to: ["brenig.g@gmail.com"], // Temporaire - changera à greg@nlgconsulting.co après vérification du domaine
         subject: `New Lead: ${name} - Business Legend Contact Form`,
         html: `
           <h1>New Contact Form Submission</h1>
