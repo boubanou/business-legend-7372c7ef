@@ -14,28 +14,28 @@ const About = () => {
         <html lang={i18n.language} />
       </Helmet>
 
-      <div className="min-h-screen pt-28">
-        <section className="py-20 bg-background">
+      <div className="min-h-screen pt-20">
+        <section className="py-12 md:py-20 bg-background">
           <div className="container mx-auto px-4 max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 md:mb-4">
               {t("about.title")}
             </h1>
-            <p className="text-xl text-muted-foreground text-center mb-16">
+            <p className="text-lg sm:text-xl text-muted-foreground text-center mb-8 md:mb-16">
               {t("about.subtitle")}
             </p>
 
             {/* Introduction */}
-            <div className="mb-12 text-center">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <div className="mb-8 md:mb-12 text-center">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 md:mb-4">
                 {t("about.introTitle")}
               </h2>
-              <p className="text-xl text-foreground/90 italic">
+              <p className="text-lg sm:text-xl text-foreground/90 italic">
                 {t("about.introText")}
               </p>
             </div>
 
             {/* Main Content */}
-            <Card className="p-8 md:p-12 mb-12">
+            <Card className="p-6 md:p-8 lg:p-12 mb-8 md:mb-12">
               <div className="prose prose-lg max-w-none">
                 {t("about.mainText").split('\n\n').map((paragraph, index) => (
                   <p key={index} className="text-lg text-muted-foreground leading-relaxed mb-6 last:mb-0">
@@ -46,14 +46,14 @@ const About = () => {
             </Card>
 
             {/* Quote */}
-            <Card className="p-8 md:p-12 mb-12 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
+            <Card className="p-6 md:p-8 lg:p-12 mb-8 md:mb-12 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
               <blockquote className="text-center">
-                <div className="text-2xl md:text-3xl font-bold mb-6 leading-relaxed">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 md:mb-6 leading-relaxed">
                   {t("about.quote").split('\n').map((line, index) => (
                     <p key={index} className="mb-2">"{line}"</p>
                   ))}
                 </div>
-                <footer className="text-lg text-muted-foreground">
+                <footer className="text-base sm:text-lg text-muted-foreground">
                   — {t("about.quoteAuthor")}
                 </footer>
               </blockquote>
@@ -61,10 +61,10 @@ const About = () => {
 
             {/* Host */}
             <div className="text-center">
-              <h2 className="text-2xl font-bold mb-8">{t("about.hostTitle")}</h2>
+              <h2 className="text-xl sm:text-2xl font-bold mb-6 md:mb-8">{t("about.hostTitle")}</h2>
               
-              <div className="max-w-md mx-auto mb-8">
-                <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20">
+              <div className="max-w-md mx-auto mb-6 md:mb-8">
+                <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-4 md:mb-6 rounded-full overflow-hidden border-4 border-primary/20">
                   <img 
                     src={gregoryBrenig} 
                     alt="Gregory Brenig" 

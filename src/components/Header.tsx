@@ -1,12 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { Globe } from "lucide-react";
+import { Globe, Menu, X } from "lucide-react";
+import { useState } from "react";
 import podcastLogo from "@/assets/podcast-logo.png";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleLanguage = () => {
     i18n.changeLanguage(i18n.language === 'fr' ? 'en' : 'fr');
@@ -14,18 +16,21 @@ const Header = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const closeMobileMenu = () => setMobileMenuOpen(false);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-          <img src={podcastLogo} alt="Business Legend" className="h-16 w-16 object-contain" />
+      <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-2 md:gap-3 hover:opacity-80 transition-opacity" onClick={closeMobileMenu}>
+          <img src={podcastLogo} alt="Business Legend" className="h-12 w-12 md:h-16 md:w-16 object-contain" />
           <div className="flex flex-col">
-            <span className="text-2xl font-bold text-foreground leading-tight">BUSINESS</span>
-            <span className="text-2xl font-bold text-primary leading-tight">LEGEND</span>
+            <span className="text-lg md:text-2xl font-bold text-foreground leading-tight">BUSINESS</span>
+            <span className="text-lg md:text-2xl font-bold text-primary leading-tight">LEGEND</span>
           </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-4 lg:gap-8">
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex items-center gap-6">
           <Link
             to="/"
             className={`text-sm font-medium transition-colors hover:text-primary ${
@@ -68,7 +73,7 @@ const Header = () => {
           </Link>
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 md:gap-4">
           <Button
             variant="ghost"
             size="sm"
@@ -76,15 +81,84 @@ const Header = () => {
             className="gap-2"
           >
             <Globe className="h-4 w-4" />
-            {i18n.language.toUpperCase()}
+            <span className="hidden sm:inline">{i18n.language.toUpperCase()}</span>
           </Button>
-          <Link to="/partnerships">
-            <Button variant="hero" size="sm" className="hidden md:inline-flex">
+          
+          <Link to="/partnerships" className="hidden lg:block">
+            <Button variant="hero" size="sm">
               {t("home.becomePartner")}
             </Button>
           </Link>
+
+          {/* Mobile Menu Button */}
+          <Button
+            variant="ghost"
+            size="sm"
+            className="lg:hidden"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </Button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden bg-background border-t border-border">
+          <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
+            <Link
+              to="/"
+              onClick={closeMobileMenu}
+              className={`text-sm font-medium transition-colors hover:text-primary py-2 ${
+                isActive("/") ? "text-primary" : "text-foreground"
+              }`}
+            >
+              {t("nav.home")}
+            </Link>
+            <Link
+              to="/partnerships"
+              onClick={closeMobileMenu}
+              className={`text-sm font-medium transition-colors hover:text-primary py-2 ${
+                isActive("/partnerships") ? "text-primary" : "text-foreground"
+              }`}
+            >
+              {t("nav.partnerships")}
+            </Link>
+            <Link
+              to="/episodes"
+              onClick={closeMobileMenu}
+              className={`text-sm font-medium transition-colors hover:text-primary py-2 ${
+                isActive("/episodes") ? "text-primary" : "text-foreground"
+              }`}
+            >
+              {t("nav.episodes")}
+            </Link>
+            <Link
+              to="/about"
+              onClick={closeMobileMenu}
+              className={`text-sm font-medium transition-colors hover:text-primary py-2 ${
+                isActive("/about") ? "text-primary" : "text-foreground"
+              }`}
+            >
+              {t("nav.about")}
+            </Link>
+            <Link
+              to="/contact"
+              onClick={closeMobileMenu}
+              className={`text-sm font-medium transition-colors hover:text-primary py-2 ${
+                isActive("/contact") ? "text-primary" : "text-foreground"
+              }`}
+            >
+              {t("nav.contact")}
+            </Link>
+            <Link to="/partnerships" onClick={closeMobileMenu}>
+              <Button variant="hero" size="sm" className="w-full">
+                {t("home.becomePartner")}
+              </Button>
+            </Link>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };

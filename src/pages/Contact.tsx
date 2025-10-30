@@ -72,12 +72,12 @@ const Contact = () => {
       </Helmet>
 
       <div className="min-h-screen pt-20">
-        <section className="py-20 bg-background">
+        <section className="py-12 md:py-20 bg-background">
           <div className="container mx-auto px-4 max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 md:mb-4">
               {t("contact.title")}
             </h1>
-            <p className="text-xl text-muted-foreground text-center mb-12">
+            <p className="text-lg sm:text-xl text-muted-foreground text-center mb-8 md:mb-12">
               {t("contact.subtitle")}
             </p>
 
