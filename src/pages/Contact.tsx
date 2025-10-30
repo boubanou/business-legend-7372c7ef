@@ -100,8 +100,10 @@ const Contact = () => {
 
               <div className="mt-8 text-center">
                 <p className="text-muted-foreground mb-4">{t("contact.or")}</p>
-                <Button variant="outline" className="w-full">
-                  {t("contact.scheduleCall")}
+                <Button variant="outline" className="w-full" asChild>
+                  <a href="https://calendly.com/greg-nlgconsulting/15min" target="_blank" rel="noopener noreferrer">
+                    {t("contact.scheduleCall")}
+                  </a>
                 </Button>
               </div>
             </Card>

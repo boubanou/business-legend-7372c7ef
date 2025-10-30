@@ -43,8 +43,15 @@ const Partnerships = () => {
               <Button variant="hero" size="lg">
                 {t("partnerships.requestKit")}
               </Button>
-              <Button variant="outline" size="lg" className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-secondary">
-                {t("partnerships.bookCall")}
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-secondary"
+                asChild
+              >
+                <a href="https://calendly.com/greg-nlgconsulting/15min" target="_blank" rel="noopener noreferrer">
+                  {t("partnerships.bookCall")}
+                </a>
               </Button>
             </div>
           </div>
@@ -133,8 +140,15 @@ const Partnerships = () => {
               <Button variant="hero" size="lg">
                 {t("partnerships.requestKit")}
               </Button>
-              <Button variant="outline" size="lg" className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-secondary">
-                {t("partnerships.bookCall")}
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-secondary"
+                asChild
+              >
+                <a href="https://calendly.com/greg-nlgconsulting/15min" target="_blank" rel="noopener noreferrer">
+                  {t("partnerships.bookCall")}
+                </a>
               </Button>
             </div>
           </div>
