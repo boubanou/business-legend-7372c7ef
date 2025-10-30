@@ -17,7 +17,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">{t("footer.platforms")}</h4>
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://lnkd.in/dUB74jMq"
+                href="https://open.spotify.com/show/1FaH8oLslZzgULdQRYJNSz?si=gR1efx4hTLW0bevPj_Fhmw&nd=1&dlsi=b1fabe7817f9465f"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:scale-110 transition-transform"
@@ -28,7 +28,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://lnkd.in/dPavRt9k"
+                href="https://podcasts.apple.com/au/podcast/business-legend/id1791395807"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:scale-110 transition-transform"
@@ -39,7 +39,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://lnkd.in/d6GA8CkM"
+                href="https://www.deezer.com/fr/show/1001563291"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:scale-110 transition-transform"
@@ -50,7 +50,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://lnkd.in/dhsBJyNR"
+                href="https://music.amazon.fr/podcasts/5db5f446-4f09-4366-993e-4a867992ff10/business-legend"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:scale-110 transition-transform"
@@ -61,7 +61,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://lnkd.in/d6zMHEW5"
+                href="https://www.youtube.com/@businesslegend-g8g"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:scale-110 transition-transform"
