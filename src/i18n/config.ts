@@ -12,7 +12,7 @@ const resources = {
         contact: 'Contact',
       },
       home: {
-        heroTitle: 'Business Legend — Le podcast business natif LinkedIn, bilingue FR/EN',
+        heroTitle: 'Business Legend — Le podcast business LinkedIn',
         heroSubtitle: 'Les légendes ne naissent pas, elles se construisent.',
         heroText: 'Business Legend explore le parcours humain et professionnel de ceux qui ont osé — fondateurs, investisseurs, créateurs, dirigeants — à travers des interviews filmées, sincères et profondes.\n\nChaque épisode est un moment de vérité : une plongée dans les choix, les doutes et les tournants qui font de ces personnalités des légendes du business.',
         heroFeatures: {
@@ -29,7 +29,7 @@ const resources = {
           global: 'Audience mondiale',
           balanced: 'Tranches d\'âge équilibrées 20–60+',
         },
-        poweredBy: 'Powered by Block Tech',
+        poweredBy: 'Powered by NLG Consulting',
       },
       partnerships: {
         heroTitle: 'Sponsorisez le podcast que les décideurs écoutent vraiment.',
@@ -114,7 +114,7 @@ const resources = {
         contact: 'Contact',
       },
       home: {
-        heroTitle: 'Business Legend — The LinkedIn-native bilingual business podcast (FR/EN)',
+        heroTitle: 'Business Legend — The LinkedIn business podcast',
         heroSubtitle: 'Legends aren\'t born. They\'re built.',
         heroText: 'Business Legend explores the personal and professional journeys of those who dared — founders, investors, creators, and executives — through filmed, genuine and insightful interviews.\n\nEach episode is a moment of truth: a deep dive into the decisions, doubts, and turning points that make these individuals true business legends.',
         heroFeatures: {
@@ -131,7 +131,7 @@ const resources = {
           global: 'Global Audience',
           balanced: 'Balanced age groups 20–60+',
         },
-        poweredBy: 'Powered by Block Tech',
+        poweredBy: 'Powered by NLG Consulting',
       },
       partnerships: {
         heroTitle: 'Sponsor the podcast decision-makers actually listen to.',
