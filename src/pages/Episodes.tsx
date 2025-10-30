@@ -24,13 +24,45 @@ const Episodes = () => {
   useEffect(() => {
     const fetchEpisodes = async () => {
       try {
-        // Use CORS proxy to fetch RSS feed
-        const response = await fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent("https://anchor.fm/s/100214854/podcast/rss"));
-        const text = await response.text();
+        // Try multiple CORS proxies in case one fails
+        const proxies = [
+          "https://api.allorigins.win/raw?url=",
+          "https://corsproxy.io/?",
+        ];
+        
+        const rssUrl = "https://anchor.fm/s/100214854/podcast/rss";
+        let response;
+        let text;
+        
+        // Try each proxy until one works
+        for (const proxy of proxies) {
+          try {
+            response = await fetch(proxy + encodeURIComponent(rssUrl));
+            if (response.ok) {
+              text = await response.text();
+              break;
+            }
+          } catch (err) {
+            console.log(`Proxy ${proxy} failed, trying next...`);
+          }
+        }
+        
+        if (!text) {
+          throw new Error("All CORS proxies failed");
+        }
+        
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(text, "text/xml");
         
+        // Check for parsing errors
+        const parserError = xmlDoc.querySelector("parsererror");
+        if (parserError) {
+          throw new Error("XML parsing error");
+        }
+        
         const items = xmlDoc.querySelectorAll("item");
+        console.log(`Found ${items.length} episodes in RSS feed`);
+        
         const parsedEpisodes: Episode[] = Array.from(items).map((item, index) => {
           const title = item.querySelector("title")?.textContent || "Untitled Episode";
           const description = item.querySelector("description")?.textContent || "";
@@ -52,6 +84,7 @@ const Episodes = () => {
         });
 
         setEpisodes(parsedEpisodes);
+        console.log(`Successfully loaded ${parsedEpisodes.length} episodes`);
       } catch (error) {
         console.error("Error fetching RSS feed:", error);
       } finally {
@@ -116,7 +149,8 @@ const Episodes = () => {
               {/* Episodes Grid */}
               {loading ? (
                 <div className="text-center py-12">
-                  <p className="text-muted-foreground">Loading episodes...</p>
+                  <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] mb-4"></div>
+                  <p className="text-muted-foreground">{t("episodes.loading") || "Chargement des épisodes..."}</p>
                 </div>
               ) : (
                 <>
