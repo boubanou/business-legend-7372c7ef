@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import Parser from "rss-parser";
 
 interface Episode {
   id: string;
@@ -25,18 +24,32 @@ const Episodes = () => {
   useEffect(() => {
     const fetchEpisodes = async () => {
       try {
-        const parser = new Parser();
-        const feed = await parser.parseURL("https://anchor.fm/s/100214854/podcast/rss");
+        // Use CORS proxy to fetch RSS feed
+        const response = await fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent("https://anchor.fm/s/100214854/podcast/rss"));
+        const text = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(text, "text/xml");
         
-        const parsedEpisodes: Episode[] = feed.items.map((item, index) => ({
-          id: item.guid || String(index),
-          title: item.title || "Untitled Episode",
-          description: item.contentSnippet || item.content || "",
-          audioUrl: item.enclosure?.url || "",
-          publishDate: item.pubDate || "",
-          language: item.title?.toLowerCase().includes("english") ? "en" : "fr",
-          image: item.itunes?.image || feed.image?.url,
-        }));
+        const items = xmlDoc.querySelectorAll("item");
+        const parsedEpisodes: Episode[] = Array.from(items).map((item, index) => {
+          const title = item.querySelector("title")?.textContent || "Untitled Episode";
+          const description = item.querySelector("description")?.textContent || "";
+          const enclosure = item.querySelector("enclosure");
+          const audioUrl = enclosure?.getAttribute("url") || "";
+          const pubDate = item.querySelector("pubDate")?.textContent || "";
+          const itunesImage = item.querySelector("image")?.getAttribute("href") || "";
+          const channelImage = xmlDoc.querySelector("channel > image > url")?.textContent || "";
+          
+          return {
+            id: item.querySelector("guid")?.textContent || String(index),
+            title,
+            description: description.replace(/<[^>]*>/g, ""), // Strip HTML
+            audioUrl,
+            publishDate: pubDate,
+            language: title.toLowerCase().includes("english") ? "en" : "fr",
+            image: itunesImage || channelImage,
+          };
+        });
 
         setEpisodes(parsedEpisodes);
       } catch (error) {
