@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { Globe, TrendingUp } from "lucide-react";
+import { Globe } from "lucide-react";
+import podcastLogo from "@/assets/podcast-logo.png";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -16,13 +17,11 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 h-24 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity group">
-          <div className="flex items-center gap-2 bg-gradient-to-r from-primary to-primary-glow p-2 rounded-lg shadow-lg group-hover:shadow-xl transition-shadow">
-            <TrendingUp className="h-6 w-6 text-primary-foreground" />
-          </div>
+        <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <img src={podcastLogo} alt="Business Legend" className="h-16 w-16 object-contain" />
           <div className="flex flex-col">
-            <span className="text-lg font-bold text-foreground leading-none">BUSINESS</span>
-            <span className="text-lg font-bold text-primary leading-none">LEGEND</span>
+            <span className="text-2xl font-bold text-foreground leading-tight">BUSINESS</span>
+            <span className="text-2xl font-bold text-primary leading-tight">LEGEND</span>
           </div>
         </Link>
 
