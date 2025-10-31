@@ -4,11 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Globe, Menu, X } from "lucide-react";
 import { useState } from "react";
 import podcastLogo from "@/assets/podcast-logo.png";
+import ContactFormDialog from "@/components/ContactFormDialog";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [contactDialogOpen, setContactDialogOpen] = useState(false);
 
   const toggleLanguage = () => {
     i18n.changeLanguage(i18n.language === 'fr' ? 'en' : 'fr');
@@ -84,11 +86,14 @@ const Header = () => {
             <span className="hidden sm:inline">{i18n.language.toUpperCase()}</span>
           </Button>
           
-          <Link to="/partnerships" className="hidden lg:block">
-            <Button variant="hero" size="sm">
-              {t("home.becomePartner")}
-            </Button>
-          </Link>
+          <Button 
+            variant="hero" 
+            size="sm" 
+            className="hidden lg:block"
+            onClick={() => setContactDialogOpen(true)}
+          >
+            {t("home.becomePartner")}
+          </Button>
 
           {/* Mobile Menu Button */}
           <Button
@@ -151,14 +156,22 @@ const Header = () => {
             >
               {t("nav.contact")}
             </Link>
-            <Link to="/partnerships" onClick={closeMobileMenu}>
-              <Button variant="hero" size="sm" className="w-full">
-                {t("home.becomePartner")}
-              </Button>
-            </Link>
+            <Button 
+              variant="hero" 
+              size="sm" 
+              className="w-full"
+              onClick={() => {
+                closeMobileMenu();
+                setContactDialogOpen(true);
+              }}
+            >
+              {t("home.becomePartner")}
+            </Button>
           </nav>
         </div>
       )}
+
+      <ContactFormDialog open={contactDialogOpen} onOpenChange={setContactDialogOpen} />
     </header>
   );
 };
