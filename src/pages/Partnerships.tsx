@@ -25,6 +25,26 @@ const Partnerships = () => {
     { title: t("partnerships.step4"), desc: t("partnerships.step4Desc") },
   ];
 
+  const handleDownload = async () => {
+    const url = mediaKitHref;
+    const file = url.split("/").pop() || "media-kit.pdf";
+    try {
+      const resp = await fetch(url);
+      if (!resp.ok) throw new Error("Failed to fetch file");
+      const blob = await resp.blob();
+      const objectUrl = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = objectUrl;
+      a.download = file;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(objectUrl);
+    } catch (e) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -44,10 +64,8 @@ const Partnerships = () => {
               {t("partnerships.heroSubtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg" asChild>
-                <a href={mediaKitHref} download>
-                  {t("partnerships.requestKit")}
-                </a>
+              <Button variant="hero" size="lg" onClick={handleDownload}>
+                {t("partnerships.requestKit")}
               </Button>
               <Button
                 variant="outline" 
@@ -143,10 +161,8 @@ const Partnerships = () => {
               {t("partnerships.ctaText")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg" asChild>
-                <a href={mediaKitHref} download>
-                  {t("partnerships.requestKit")}
-                </a>
+              <Button variant="hero" size="lg" onClick={handleDownload}>
+                {t("partnerships.requestKit")}
               </Button>
               <Button 
                 variant="outline" 
