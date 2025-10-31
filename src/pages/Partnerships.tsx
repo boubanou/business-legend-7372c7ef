@@ -40,10 +40,12 @@ const Partnerships = () => {
               {t("partnerships.heroSubtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg">
-                {t("partnerships.requestKit")}
+              <Button variant="hero" size="lg" asChild>
+                <a href="/business_legend_media_kit_2025_EN.pdf" download>
+                  {t("partnerships.requestKit")}
+                </a>
               </Button>
-              <Button 
+              <Button
                 variant="outline" 
                 size="lg" 
                 className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-secondary"
@@ -137,8 +139,10 @@ const Partnerships = () => {
               {t("partnerships.ctaText")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg">
-                {t("partnerships.requestKit")}
+              <Button variant="hero" size="lg" asChild>
+                <a href="/business_legend_media_kit_2025_EN.pdf" download>
+                  {t("partnerships.requestKit")}
+                </a>
               </Button>
               <Button 
                 variant="outline" 
