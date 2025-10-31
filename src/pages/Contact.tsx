@@ -148,7 +148,7 @@ const Contact = () => {
             </Card>
 
             <div className="text-center mt-8 text-muted-foreground">
-              <p>contact@business-legend.co</p>
+              <p>contact@businesslegend.co</p>
             </div>
           </div>
         </section>

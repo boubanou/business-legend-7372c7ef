@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "@/i18n/config";
 import Header from "@/components/Header";
+import ScrollToTop from "@/components/ScrollToTop";
 import Footer from "@/components/Footer";
 import Home from "./pages/Home";
 import Partnerships from "./pages/Partnerships";
@@ -23,6 +24,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow">
