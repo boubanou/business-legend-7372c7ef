@@ -7,6 +7,10 @@ import { CheckCircle2 } from "lucide-react";
 const Partnerships = () => {
   const { t, i18n } = useTranslation();
 
+  const mediaKitHref = i18n.language.startsWith("fr")
+    ? "/FR_Guest_Conduct_PodCast_-_Business_Legend.pdf"
+    : "/business_legend_media_kit_2025_EN.pdf";
+
   const formats = [
     { title: t("partnerships.preroll"), desc: t("partnerships.prerollDesc") },
     { title: t("partnerships.hostRead"), desc: t("partnerships.hostReadDesc") },
@@ -41,7 +45,7 @@ const Partnerships = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <a href="/business_legend_media_kit_2025_EN.pdf" download>
+                <a href={mediaKitHref} download>
                   {t("partnerships.requestKit")}
                 </a>
               </Button>
@@ -140,7 +144,7 @@ const Partnerships = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <a href="/business_legend_media_kit_2025_EN.pdf" download>
+                <a href={mediaKitHref} download>
                   {t("partnerships.requestKit")}
                 </a>
               </Button>
