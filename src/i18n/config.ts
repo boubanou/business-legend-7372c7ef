@@ -96,6 +96,7 @@ const resources = {
         send: 'Envoyer',
         scheduleCall: 'Planifier un appel',
         or: 'ou',
+        sending: 'Envoi en cours...',
       },
       footer: {
         tagline: 'How Business Legends Become the Influence',
@@ -198,6 +199,7 @@ const resources = {
         send: 'Send',
         scheduleCall: 'Schedule a call',
         or: 'or',
+        sending: 'Sending...',
       },
       footer: {
         tagline: 'How Business Legends Become the Influence',
