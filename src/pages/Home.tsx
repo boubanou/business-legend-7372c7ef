@@ -28,6 +28,36 @@ const Home = () => {
         <meta name="twitter:title" content={i18n.language === 'fr' ? 'Business Legend Podcast | Entrepreneuriat, Leadership & Inspiration' : 'Business Legend Podcast | Entrepreneurship, Leadership & Inspiration'} />
         <meta name="twitter:description" content={i18n.language === 'fr' ? "Le podcast business international francophone qui révèle les parcours inspirants de dirigeants, fondateurs et innovateurs." : "The international French-language business podcast revealing inspiring journeys of executives and founders."} />
         
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": i18n.language === 'fr' ? "Business Legend Podcast - Accueil" : "Business Legend Podcast - Home",
+            "description": i18n.language === 'fr' ? "Podcast business international francophone avec interviews de dirigeants et entrepreneurs" : "International French-speaking business podcast with executive and entrepreneur interviews",
+            "url": "https://businesslegend.co/",
+            "isPartOf": {
+              "@type": "WebSite",
+              "@id": "https://businesslegend.co/#website"
+            },
+            "about": {
+              "@type": "PodcastSeries",
+              "name": "Business Legend",
+              "description": i18n.language === 'fr' ? "Podcast business francophone international avec des interviews filmées de fondateurs, dirigeants et innovateurs. Format bilingue français-anglais disponible sur LinkedIn, Spotify, YouTube et Apple Podcasts." : "International French-speaking business podcast with filmed interviews of founders, executives and innovators. Bilingual French-English format available on LinkedIn, Spotify, YouTube and Apple Podcasts.",
+              "genre": ["Business", "Entrepreneuriat", "Leadership", "Innovation"],
+              "inLanguage": ["fr", "en"]
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": i18n.language === 'fr' ? "Accueil" : "Home",
+                "item": "https://businesslegend.co/"
+              }]
+            }
+          })}
+        </script>
+        
         <html lang={i18n.language} />
       </Helmet>
 

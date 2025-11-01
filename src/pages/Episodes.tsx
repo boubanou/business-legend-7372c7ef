@@ -115,6 +115,38 @@ const Episodes = () => {
         <meta name="twitter:title" content={i18n.language === 'fr' ? 'Épisodes Business Legend' : 'Business Legend Episodes'} />
         <meta name="twitter:description" content={i18n.language === 'fr' ? "Interviews entrepreneurs et leaders" : "Entrepreneur and leader interviews"} />
         
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": i18n.language === 'fr' ? "Épisodes du Podcast Business Legend" : "Business Legend Podcast Episodes",
+            "description": i18n.language === 'fr' ? "Tous les épisodes du podcast Business Legend avec des interviews inspirantes d'entrepreneurs, fondateurs et leaders du monde entier" : "All Business Legend podcast episodes with inspiring interviews of entrepreneurs, founders and leaders from around the world",
+            "url": "https://businesslegend.co/episodes",
+            "isPartOf": {
+              "@type": "PodcastSeries",
+              "name": "Business Legend",
+              "@id": "https://businesslegend.co/#podcast"
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": i18n.language === 'fr' ? "Accueil" : "Home",
+                  "item": "https://businesslegend.co/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": i18n.language === 'fr' ? "Épisodes" : "Episodes",
+                  "item": "https://businesslegend.co/episodes"
+                }
+              ]
+            }
+          })}
+        </script>
+        
         <html lang={i18n.language} />
       </Helmet>
 

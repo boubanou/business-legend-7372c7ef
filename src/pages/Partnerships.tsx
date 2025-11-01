@@ -61,6 +61,49 @@ const Partnerships = () => {
         <meta name="twitter:title" content={i18n.language === 'fr' ? 'Partenariats Business Legend' : 'Business Legend Partnerships'} />
         <meta name="twitter:description" content={i18n.language === 'fr' ? "Sponsorisez le podcast que les décideurs écoutent" : "Sponsor the podcast decision-makers listen to"} />
         
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": i18n.language === 'fr' ? "Partenariats et Sponsoring de Podcast Business" : "Business Podcast Partnerships and Sponsorship",
+            "name": i18n.language === 'fr' ? "Partenariats Business Legend" : "Business Legend Partnerships",
+            "description": i18n.language === 'fr' ? "Opportunités de sponsoring premium dans le podcast business bilingue le plus innovant d'Europe, touchant fondateurs, dirigeants et décideurs dans plus de 120 pays." : "Premium sponsorship opportunities in Europe's most innovative bilingual business podcast, reaching founders, executives and decision-makers in over 120 countries.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Business Legend",
+              "@id": "https://businesslegend.co/#organization"
+            },
+            "url": "https://businesslegend.co/partnerships",
+            "areaServed": "International",
+            "audience": {
+              "@type": "Audience",
+              "audienceType": i18n.language === 'fr' ? "Marques B2B, Entreprises, Startups recherchant une audience de dirigeants et décideurs" : "B2B Brands, Companies, Startups seeking executive and decision-maker audience"
+            },
+            "offers": {
+              "@type": "Offer",
+              "name": i18n.language === 'fr' ? "Packages de Sponsoring Podcast" : "Podcast Sponsorship Packages",
+              "description": i18n.language === 'fr' ? "Packages de partenariat sur mesure incluant mentions audio, intégrations vidéo et visibilité multiplateforme" : "Custom partnership packages including audio mentions, video integrations and multi-platform visibility"
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": i18n.language === 'fr' ? "Accueil" : "Home",
+                  "item": "https://businesslegend.co/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": i18n.language === 'fr' ? "Partenariats" : "Partnerships",
+                  "item": "https://businesslegend.co/partnerships"
+                }
+              ]
+            }
+          })}
+        </script>
+        
         <html lang={i18n.language} />
       </Helmet>
 

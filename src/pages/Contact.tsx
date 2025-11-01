@@ -79,6 +79,45 @@ const Contact = () => {
         <meta name="twitter:title" content={i18n.language === 'fr' ? 'Contact Business Legend' : 'Contact Business Legend'} />
         <meta name="twitter:description" content={i18n.language === 'fr' ? "Contactez-nous pour devenir invité ou partenaire" : "Contact us to become a guest or partner"} />
         
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": i18n.language === 'fr' ? "Contactez Business Legend" : "Contact Business Legend",
+            "description": i18n.language === 'fr' ? "Page de contact pour devenir invité du podcast, proposer un partenariat ou sponsoriser un épisode de Business Legend" : "Contact page to become a podcast guest, propose a partnership or sponsor a Business Legend episode",
+            "url": "https://businesslegend.co/contact",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Business Legend",
+              "@id": "https://businesslegend.co/#organization",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "contact@businesslegend.co",
+                "contactType": i18n.language === 'fr' ? "Service Client" : "Customer Service",
+                "availableLanguage": ["French", "English"],
+                "areaServed": "International"
+              }
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": i18n.language === 'fr' ? "Accueil" : "Home",
+                  "item": "https://businesslegend.co/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Contact",
+                  "item": "https://businesslegend.co/contact"
+                }
+              ]
+            }
+          })}
+        </script>
+        
         <html lang={i18n.language} />
       </Helmet>
 

@@ -22,6 +22,48 @@ const About = () => {
         <meta name="twitter:title" content={i18n.language === 'fr' ? 'À propos de Business Legend | Gregory Brenig' : 'About Business Legend | Gregory Brenig'} />
         <meta name="twitter:description" content={i18n.language === 'fr' ? "Podcast francophone international explorant les parcours professionnels inspirants." : "International French-speaking podcast exploring inspiring professional journeys."} />
         
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": i18n.language === 'fr' ? "À propos de Business Legend" : "About Business Legend",
+            "description": i18n.language === 'fr' ? "Découvrez l'histoire et la vision derrière Business Legend, le podcast business francophone international créé par Gregory Brenig" : "Discover the story and vision behind Business Legend, the international French-speaking business podcast created by Gregory Brenig",
+            "url": "https://businesslegend.co/about",
+            "mainEntity": {
+              "@type": "Person",
+              "name": "Gregory Brenig",
+              "jobTitle": i18n.language === 'fr' ? "Créateur et Animateur" : "Creator and Host",
+              "description": i18n.language === 'fr' ? "Entrepreneur, créateur et animateur du podcast Business Legend, fondateur de Block Tech et NLG Consulting" : "Entrepreneur, creator and host of Business Legend podcast, founder of Block Tech and NLG Consulting",
+              "url": "https://www.linkedin.com/in/gregory-brenig-98007125/",
+              "sameAs": [
+                "https://www.linkedin.com/in/gregory-brenig-98007125/",
+                "https://block-tech.co",
+                "https://nlgconsulting.co"
+              ],
+              "image": "https://businesslegend.co/assets/gregory-brenig.jpg",
+              "alumniOf": "Business Legend",
+              "knowsAbout": ["Entrepreneuriat", "Leadership", "Business Development", "Innovation"]
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": i18n.language === 'fr' ? "Accueil" : "Home",
+                  "item": "https://businesslegend.co/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": i18n.language === 'fr' ? "À propos" : "About",
+                  "item": "https://businesslegend.co/about"
+                }
+              ]
+            }
+          })}
+        </script>
+        
         <html lang={i18n.language} />
       </Helmet>
 
