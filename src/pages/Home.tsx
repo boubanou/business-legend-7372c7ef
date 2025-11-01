@@ -4,9 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { TrendingUp, Globe, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import ContactFormDialog from "@/components/ContactFormDialog";
+import { useState } from "react";
 
 const Home = () => {
   const { t, i18n } = useTranslation();
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 
   return (
     <>
@@ -62,15 +65,23 @@ const Home = () => {
                     {t("home.watchNow")}
                   </Button>
                 </Link>
-                <Link to="/partnerships">
-                  <Button variant="outline" size="lg" className="border-secondary-foreground bg-secondary-foreground/10 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
-                    {t("home.becomePartner")}
-                  </Button>
-                </Link>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-secondary-foreground bg-secondary-foreground/10 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary"
+                  onClick={() => setIsContactDialogOpen(true)}
+                >
+                  {t("home.becomePartner")}
+                </Button>
               </div>
             </div>
           </div>
         </section>
+
+        <ContactFormDialog 
+          open={isContactDialogOpen} 
+          onOpenChange={setIsContactDialogOpen} 
+        />
 
         {/* Vision Section */}
         <section className="py-12 md:py-16 bg-gradient-to-br from-primary/5 to-primary/10">
