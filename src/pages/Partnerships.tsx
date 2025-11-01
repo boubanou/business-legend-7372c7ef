@@ -8,7 +8,7 @@ const Partnerships = () => {
   const { t, i18n } = useTranslation();
 
   const mediaKitHref = i18n.language.startsWith("fr")
-    ? "/FR_Guest_Conduct_PodCast_-_Business_Legend.pdf"
+    ? "/business_legend_media_kit_2025_FR.pdf"
     : "/business_legend_media_kit_2025_EN.pdf";
 
   const formats = [
