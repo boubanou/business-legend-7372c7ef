@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { TrendingUp, Globe, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import ContactFormDialog from "@/components/ContactFormDialog";
+import LiteYouTube from "@/components/LiteYouTube";
 import { useState } from "react";
 
 const Home = () => {
@@ -54,17 +55,9 @@ const Home = () => {
 
               {/* YouTube Video Embed */}
               <div className="aspect-video max-w-3xl mx-auto mb-6 md:mb-8 rounded-lg md:rounded-xl overflow-hidden shadow-2xl px-4">
-                <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/xlnCbeBAehY?si=buIDmp0JdXfbWX0M" 
-                  title="Business Legend Podcast - Interview entrepreneurs et leaders internationaux" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  referrerPolicy="strict-origin-when-cross-origin" 
-                  allowFullScreen
-                  loading="lazy"
-                  className="w-full h-full"
+                <LiteYouTube
+                  videoId="xlnCbeBAehY"
+                  title="Business Legend Podcast - Interview entrepreneurs et leaders internationaux"
                 />
               </div>
 
