@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { Play } from "lucide-react";
 
 interface LiteYouTubeProps {
@@ -39,6 +39,8 @@ const LiteYouTube = ({ videoId, title }: LiteYouTubeProps) => {
         className="w-full h-full object-cover"
         loading="eager"
         fetchPriority="high"
+        width="1280"
+        height="720"
       />
       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
       <div className="absolute inset-0 flex items-center justify-center">
@@ -50,4 +52,4 @@ const LiteYouTube = ({ videoId, title }: LiteYouTubeProps) => {
   );
 };
 
-export default LiteYouTube;
+export default memo(LiteYouTube);

@@ -6,7 +6,7 @@ import { TrendingUp, Globe, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import ContactFormDialog from "@/components/ContactFormDialog";
 import LiteYouTube from "@/components/LiteYouTube";
-import { useState } from "react";
+import { useState, memo } from "react";
 
 const Home = () => {
   const { t, i18n } = useTranslation();
@@ -178,4 +178,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default memo(Home);

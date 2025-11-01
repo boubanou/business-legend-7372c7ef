@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { memo } from "react";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -41,11 +42,6 @@ const Footer = () => {
                 <Link to="/contact" className="text-sm hover:text-primary transition-colors">
                   {t("nav.contact")}
                 </Link>
-              </li>
-              <li>
-                <a href="/sitemap.xml" className="text-sm hover:text-primary transition-colors">
-                  Sitemap
-                </a>
               </li>
             </ul>
           </nav>
@@ -129,4 +125,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

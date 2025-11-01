@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { useTranslation } from "react-i18next";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -21,7 +21,7 @@ interface ContactFormDialogProps {
   onOpenChange: (open: boolean) => void;
 }
 
-export default function ContactFormDialog({ open, onOpenChange }: ContactFormDialogProps) {
+const ContactFormDialog = ({ open, onOpenChange }: ContactFormDialogProps) => {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
@@ -135,4 +135,6 @@ export default function ContactFormDialog({ open, onOpenChange }: ContactFormDia
       </DialogContent>
     </Dialog>
   );
-}
+};
+
+export default memo(ContactFormDialog);
