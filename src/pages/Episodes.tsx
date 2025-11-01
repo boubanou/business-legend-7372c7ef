@@ -102,8 +102,19 @@ const Episodes = () => {
   return (
     <>
       <Helmet>
-        <title>{t("episodes.title")} | Business Legend</title>
-        <meta name="description" content={t("episodes.subtitle")} />
+        <title>{i18n.language === 'fr' ? 'Épisodes du Business Legend Podcast | Histoires d\'entrepreneurs et leaders' : 'Business Legend Podcast Episodes | Stories of entrepreneurs and leaders'}</title>
+        <meta name="description" content={i18n.language === 'fr' ? "Découvrez des interviews profondes de fondateurs, dirigeants et créateurs d'entreprises qui inspirent le monde des affaires. Podcast business bilingue français-anglais." : "Discover deep interviews with founders, executives and business creators who inspire the business world. Bilingual French-English business podcast."} />
+        <meta name="keywords" content="épisodes podcast business, interviews entrepreneurs, podcast leadership, episodes business legend, histoires entrepreneurs" />
+        <link rel="canonical" href="https://businesslegend.co/episodes" />
+        
+        <meta property="og:title" content={i18n.language === 'fr' ? 'Épisodes Business Legend | Interviews entrepreneurs' : 'Business Legend Episodes | Entrepreneur interviews'} />
+        <meta property="og:description" content={i18n.language === 'fr' ? "Interviews profondes de fondateurs et dirigeants inspirants." : "Deep interviews with inspiring founders and executives."} />
+        <meta property="og:url" content="https://businesslegend.co/episodes" />
+        <meta property="og:type" content="website" />
+        
+        <meta name="twitter:title" content={i18n.language === 'fr' ? 'Épisodes Business Legend' : 'Business Legend Episodes'} />
+        <meta name="twitter:description" content={i18n.language === 'fr' ? "Interviews entrepreneurs et leaders" : "Entrepreneur and leader interviews"} />
+        
         <html lang={i18n.language} />
       </Helmet>
 
@@ -161,8 +172,9 @@ const Episodes = () => {
                           <div className="aspect-video bg-muted overflow-hidden">
                             <img 
                               src={episode.image} 
-                              alt={episode.title}
+                              alt={`${episode.title} - Business Legend Podcast episode cover`}
                               className="w-full h-full object-cover"
+                              loading="lazy"
                             />
                           </div>
                         )}

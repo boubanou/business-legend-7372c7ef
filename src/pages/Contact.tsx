@@ -66,8 +66,19 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>{t("contact.title")} | Business Legend</title>
-        <meta name="description" content={t("contact.subtitle")} />
+        <title>{i18n.language === 'fr' ? 'Contactez Business Legend | Devenez invité ou partenaire' : 'Contact Business Legend | Become a guest or partner'}</title>
+        <meta name="description" content={i18n.language === 'fr' ? "Proposez votre candidature, collaborez ou sponsorisez un épisode du podcast Business Legend. Contactez-nous pour discuter de votre projet." : "Submit your application, collaborate or sponsor a Business Legend podcast episode. Contact us to discuss your project."} />
+        <meta name="keywords" content="contact podcast business, invité podcast, partenariat podcast, sponsoring podcast business" />
+        <link rel="canonical" href="https://businesslegend.co/contact" />
+        
+        <meta property="og:title" content={i18n.language === 'fr' ? 'Contactez Business Legend' : 'Contact Business Legend'} />
+        <meta property="og:description" content={i18n.language === 'fr' ? "Devenez invité ou partenaire du podcast Business Legend" : "Become a guest or partner of the Business Legend podcast"} />
+        <meta property="og:url" content="https://businesslegend.co/contact" />
+        <meta property="og:type" content="website" />
+        
+        <meta name="twitter:title" content={i18n.language === 'fr' ? 'Contact Business Legend' : 'Contact Business Legend'} />
+        <meta name="twitter:description" content={i18n.language === 'fr' ? "Contactez-nous pour devenir invité ou partenaire" : "Contact us to become a guest or partner"} />
+        
         <html lang={i18n.language} />
       </Helmet>
 

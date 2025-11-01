@@ -9,8 +9,19 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>{t("about.title")} | Business Legend</title>
-        <meta name="description" content={t("about.missionText")} />
+        <title>{i18n.language === 'fr' ? 'À propos de Business Legend | Créé et animé par Gregory Brenig' : 'About Business Legend | Created and hosted by Gregory Brenig'}</title>
+        <meta name="description" content={i18n.language === 'fr' ? "Business Legend est un podcast francophone international qui explore la réussite et l'humain derrière les plus grands parcours professionnels. Créé par Gregory Brenig." : "Business Legend is an international French-speaking podcast that explores success and the human behind the greatest professional journeys. Created by Gregory Brenig."} />
+        <meta name="keywords" content="Gregory Brenig, podcast business, animateur podcast, podcast leadership, podcast entrepreneur francophone" />
+        <link rel="canonical" href="https://businesslegend.co/about" />
+        
+        <meta property="og:title" content={i18n.language === 'fr' ? 'À propos de Business Legend | Gregory Brenig' : 'About Business Legend | Gregory Brenig'} />
+        <meta property="og:description" content={i18n.language === 'fr' ? "Business Legend est un podcast francophone international qui explore la réussite et l'humain derrière les plus grands parcours professionnels." : "Business Legend is an international French-speaking podcast that explores success and the human behind the greatest professional journeys."} />
+        <meta property="og:url" content="https://businesslegend.co/about" />
+        <meta property="og:type" content="website" />
+        
+        <meta name="twitter:title" content={i18n.language === 'fr' ? 'À propos de Business Legend | Gregory Brenig' : 'About Business Legend | Gregory Brenig'} />
+        <meta name="twitter:description" content={i18n.language === 'fr' ? "Podcast francophone international explorant les parcours professionnels inspirants." : "International French-speaking podcast exploring inspiring professional journeys."} />
+        
         <html lang={i18n.language} />
       </Helmet>
 
@@ -67,8 +78,9 @@ const About = () => {
                 <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-4 md:mb-6 rounded-full overflow-hidden border-4 border-primary/20">
                   <img 
                     src={gregoryBrenig} 
-                    alt="Gregory Brenig" 
+                    alt="Gregory Brenig - Créateur et animateur du podcast Business Legend, entrepreneur et fondateur de Block Tech et NLG Consulting" 
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
                 

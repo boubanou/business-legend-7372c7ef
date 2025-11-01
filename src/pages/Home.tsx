@@ -14,10 +14,19 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Business Legend | {t("home.heroTitle")}</title>
-        <meta name="description" content={t("home.heroSubtitle")} />
-        <meta property="og:title" content="Business Legend" />
-        <meta property="og:description" content={t("home.heroSubtitle")} />
+        <title>{i18n.language === 'fr' ? 'Business Legend Podcast | Entrepreneuriat, Leadership & Inspiration' : 'Business Legend Podcast | Entrepreneurship, Leadership & Inspiration'}</title>
+        <meta name="description" content={i18n.language === 'fr' ? "Le podcast business international francophone qui révèle les parcours inspirants de dirigeants, fondateurs et innovateurs du monde entier. Interviews filmées sur LinkedIn, Spotify, YouTube." : "The international French-language business podcast revealing inspiring journeys of executives, founders and innovators from around the world. Filmed interviews on LinkedIn, Spotify, YouTube."} />
+        <meta name="keywords" content="podcast business, podcast entrepreneur, podcast inspiration, podcast leadership, podcast francophone international, interview dirigeants, podcast carrières inspirantes, business legend podcast" />
+        <link rel="canonical" href="https://businesslegend.co/" />
+        
+        <meta property="og:title" content={i18n.language === 'fr' ? 'Business Legend Podcast | Entrepreneuriat, Leadership & Inspiration' : 'Business Legend Podcast | Entrepreneurship, Leadership & Inspiration'} />
+        <meta property="og:description" content={i18n.language === 'fr' ? "Le podcast business international francophone qui révèle les parcours inspirants de dirigeants, fondateurs et innovateurs." : "The international French-language business podcast revealing inspiring journeys of executives and founders."} />
+        <meta property="og:url" content="https://businesslegend.co/" />
+        <meta property="og:type" content="website" />
+        
+        <meta name="twitter:title" content={i18n.language === 'fr' ? 'Business Legend Podcast | Entrepreneuriat, Leadership & Inspiration' : 'Business Legend Podcast | Entrepreneurship, Leadership & Inspiration'} />
+        <meta name="twitter:description" content={i18n.language === 'fr' ? "Le podcast business international francophone qui révèle les parcours inspirants de dirigeants, fondateurs et innovateurs." : "The international French-language business podcast revealing inspiring journeys of executives and founders."} />
+        
         <html lang={i18n.language} />
       </Helmet>
 
@@ -49,7 +58,7 @@ const Home = () => {
                   width="100%" 
                   height="100%" 
                   src="https://www.youtube.com/embed/xlnCbeBAehY?si=buIDmp0JdXfbWX0M" 
-                  title="Business Legend Podcast" 
+                  title="Business Legend Podcast - Interview entrepreneurs et leaders internationaux" 
                   frameBorder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                   referrerPolicy="strict-origin-when-cross-origin" 
@@ -101,25 +110,25 @@ const Home = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
               <Card className="p-6 md:p-8 text-center hover:shadow-lg transition-shadow border-primary/20">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <TrendingUp className="h-8 w-8 text-primary" />
+                  <TrendingUp className="h-8 w-8 text-primary" aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">{t("home.stats.top100")}</h3>
+                <h2 className="text-xl font-bold mb-2">{t("home.stats.top100")}</h2>
                 <p className="text-muted-foreground">Premium business content</p>
               </Card>
 
               <Card className="p-8 text-center hover:shadow-lg transition-shadow border-primary/20">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Globe className="h-8 w-8 text-primary" />
+                  <Globe className="h-8 w-8 text-primary" aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">{t("home.stats.global")}</h3>
+                <h2 className="text-xl font-bold mb-2">{t("home.stats.global")}</h2>
                 <p className="text-muted-foreground">+120 Pays</p>
               </Card>
 
               <Card className="p-8 text-center hover:shadow-lg transition-shadow border-primary/20">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Users className="h-8 w-8 text-primary" />
+                  <Users className="h-8 w-8 text-primary" aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">{t("home.stats.balanced")}</h3>
+                <h2 className="text-xl font-bold mb-2">{t("home.stats.balanced")}</h2>
                 <p className="text-muted-foreground">Founders, investors, executives</p>
               </Card>
             </div>

@@ -48,8 +48,19 @@ const Partnerships = () => {
   return (
     <>
       <Helmet>
-        <title>{t("nav.partnerships")} | Business Legend</title>
-        <meta name="description" content={t("partnerships.heroSubtitle")} />
+        <title>{i18n.language === 'fr' ? 'Partenariats Business Legend | Sponsoring Podcast Business' : 'Business Legend Partnerships | Business Podcast Sponsorship'}</title>
+        <meta name="description" content={i18n.language === 'fr' ? "Sponsorisez le podcast que les décideurs écoutent. Business Legend offre des opportunités de partenariat premium pour votre marque auprès d'une audience d'élite." : "Sponsor the podcast decision-makers listen to. Business Legend offers premium partnership opportunities for your brand with an elite audience."} />
+        <meta name="keywords" content="sponsor podcast, partenariat podcast business, marques partenaires, visibilité média, podcast sponsorship, B2B marketing, brand partnerships" />
+        <link rel="canonical" href="https://businesslegend.co/partnerships" />
+        
+        <meta property="og:title" content={i18n.language === 'fr' ? 'Partenariats Business Legend | Sponsoring Podcast' : 'Business Legend Partnerships | Podcast Sponsorship'} />
+        <meta property="og:description" content={i18n.language === 'fr' ? "Opportunités de partenariat premium avec le podcast business le plus innovant d'Europe" : "Premium partnership opportunities with Europe's most innovative business podcast"} />
+        <meta property="og:url" content="https://businesslegend.co/partnerships" />
+        <meta property="og:type" content="website" />
+        
+        <meta name="twitter:title" content={i18n.language === 'fr' ? 'Partenariats Business Legend' : 'Business Legend Partnerships'} />
+        <meta name="twitter:description" content={i18n.language === 'fr' ? "Sponsorisez le podcast que les décideurs écoutent" : "Sponsor the podcast decision-makers listen to"} />
+        
         <html lang={i18n.language} />
       </Helmet>
 
