@@ -23,6 +23,12 @@ const Home = () => {
         {/* Preconnect to Cloudflare for geolocation check */}
         <link rel="preconnect" href="https://www.cloudflare.com" />
         <link rel="preconnect" href="https://i.ytimg.com" />
+        <link 
+          rel="preload" 
+          as="image" 
+          href="https://i.ytimg.com/vi/xlnCbeBAehY/maxresdefault.jpg"
+          fetchPriority="high"
+        />
         
         {/* Preload LCP image */}
         <link rel="preload" as="image" href="https://i.ytimg.com/vi/xlnCbeBAehY/maxresdefault.jpg" fetchPriority="high" />
