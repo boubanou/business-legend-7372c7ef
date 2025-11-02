@@ -117,8 +117,21 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border pt-6 text-center text-sm opacity-75">
-          © {new Date().getFullYear()} Business Legend. {t("footer.rights")}
+        <div className="border-t border-border pt-6 text-center space-y-2">
+          <div className="flex flex-wrap justify-center gap-4 text-sm mb-2">
+            <Link to="/privacy-policy" className="hover:text-primary transition-colors">
+              {t("footer.privacyPolicy")}
+            </Link>
+            <button
+              onClick={() => (window as any).openCookieSettings?.()}
+              className="hover:text-primary transition-colors"
+            >
+              {t("footer.cookieSettings")}
+            </button>
+          </div>
+          <p className="text-sm opacity-75">
+            © {new Date().getFullYear()} Business Legend. {t("footer.rights")}
+          </p>
         </div>
       </div>
     </footer>

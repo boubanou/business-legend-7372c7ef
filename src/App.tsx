@@ -9,6 +9,7 @@ import "@/i18n/config";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import Footer from "@/components/Footer";
+import { CookieConsent } from "@/components/CookieConsent";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const Partnerships = lazy(() => import("./pages/Partnerships"));
 const Episodes = lazy(() => import("./pages/Episodes"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const App = () => (
@@ -38,12 +40,14 @@ const App = () => (
                   <Route path="/episodes" element={<Episodes />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
+                  <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
             </main>
             <Footer />
           </div>
+          <CookieConsent />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

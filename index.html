@@ -136,21 +136,7 @@
     }
     </script>
     
-    <!-- Google tag (gtag.js) - Deferred for better FID -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-5H17M278WY', { anonymize_ip: true });
-      
-      // Load GA script after page load to reduce FID
-      window.addEventListener('load', function() {
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-5H17M278WY';
-        document.head.appendChild(script);
-      });
-    </script>
+    <!-- Google Analytics will be loaded via consent management -->
   </head>
 
   <body>
