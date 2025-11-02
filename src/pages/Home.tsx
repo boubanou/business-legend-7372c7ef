@@ -19,6 +19,11 @@ const Home = () => {
         <meta name="description" content={i18n.language === 'fr' ? "Le podcast business international francophone qui révèle les parcours inspirants de dirigeants, fondateurs et innovateurs du monde entier. Interviews filmées sur LinkedIn, Spotify, YouTube." : "The international French-language business podcast revealing inspiring journeys of executives, founders and innovators from around the world. Filmed interviews on LinkedIn, Spotify, YouTube."} />
         <meta name="keywords" content="podcast business, podcast entrepreneur, podcast inspiration, podcast leadership, podcast francophone international, interview dirigeants, podcast carrières inspirantes, business legend podcast" />
         <link rel="canonical" href="https://businesslegend.co/" />
+        
+        {/* Preconnect to Cloudflare for geolocation check */}
+        <link rel="preconnect" href="https://www.cloudflare.com" />
+        
+        {/* Preload LCP image */}
         <link rel="preload" as="image" href="https://i.ytimg.com/vi/xlnCbeBAehY/maxresdefault.jpg" fetchPriority="high" />
         
         <meta property="og:title" content={i18n.language === 'fr' ? 'Business Legend Podcast | Entrepreneuriat, Leadership & Inspiration' : 'Business Legend Podcast | Entrepreneurship, Leadership & Inspiration'} />
