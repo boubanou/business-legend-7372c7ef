@@ -17,20 +17,10 @@ const Footer = () => {
           {/* Navigation Links */}
           <nav className="space-y-2" aria-label="Footer navigation">
             <h3 className="font-semibold mb-3 md:mb-4 text-sm md:text-base">Navigation</h3>
-            <ul className="space-y-2">
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
               <li>
                 <Link to="/" className="text-sm hover:text-primary transition-colors">
                   {t("nav.home")}
-                </Link>
-              </li>
-              <li>
-                <Link to="/episodes" className="text-sm hover:text-primary transition-colors">
-                  {t("nav.episodes")}
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-sm hover:text-primary transition-colors">
-                  {t("nav.about")}
                 </Link>
               </li>
               <li>
@@ -39,8 +29,18 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/episodes" className="text-sm hover:text-primary transition-colors">
+                  {t("nav.episodes")}
+                </Link>
+              </li>
+              <li>
                 <Link to="/contact" className="text-sm hover:text-primary transition-colors">
                   {t("nav.contact")}
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-sm hover:text-primary transition-colors">
+                  {t("nav.about")}
                 </Link>
               </li>
             </ul>
