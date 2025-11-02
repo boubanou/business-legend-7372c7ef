@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { supabase } from "@/integrations/supabase/client";
 
 interface Episode {
   id: string;
@@ -24,69 +25,17 @@ const Episodes = () => {
   useEffect(() => {
     const fetchEpisodes = async () => {
       try {
-        // Try multiple CORS proxies in case one fails
-        const proxies = [
-          "https://api.allorigins.win/raw?url=",
-          "https://corsproxy.io/?",
-        ];
+        const { data, error } = await supabase.functions.invoke('fetch-rss-episodes');
         
-        const rssUrl = "https://anchor.fm/s/100214854/podcast/rss";
-        let response;
-        let text;
-        
-        // Try each proxy until one works
-        for (const proxy of proxies) {
-          try {
-            response = await fetch(proxy + encodeURIComponent(rssUrl));
-            if (response.ok) {
-              text = await response.text();
-              break;
-            }
-          } catch (err) {
-            console.log(`Proxy ${proxy} failed, trying next...`);
-          }
+        if (error) {
+          throw error;
         }
         
-        if (!text) {
-          throw new Error("All CORS proxies failed");
+        if (data?.episodes) {
+          setEpisodes(data.episodes);
         }
-        
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(text, "text/xml");
-        
-        // Check for parsing errors
-        const parserError = xmlDoc.querySelector("parsererror");
-        if (parserError) {
-          throw new Error("XML parsing error");
-        }
-        
-        const items = xmlDoc.querySelectorAll("item");
-        console.log(`Found ${items.length} episodes in RSS feed`);
-        
-        const parsedEpisodes: Episode[] = Array.from(items).map((item, index) => {
-          const title = item.querySelector("title")?.textContent || "Untitled Episode";
-          const description = item.querySelector("description")?.textContent || "";
-          const enclosure = item.querySelector("enclosure");
-          const audioUrl = enclosure?.getAttribute("url") || "";
-          const pubDate = item.querySelector("pubDate")?.textContent || "";
-          const itunesImage = item.querySelector("image")?.getAttribute("href") || "";
-          const channelImage = xmlDoc.querySelector("channel > image > url")?.textContent || "";
-          
-          return {
-            id: item.querySelector("guid")?.textContent || String(index),
-            title,
-            description: description.replace(/<[^>]*>/g, ""), // Strip HTML
-            audioUrl,
-            publishDate: pubDate,
-            language: title.toLowerCase().includes("english") ? "en" : "fr",
-            image: itunesImage || channelImage,
-          };
-        });
-
-        setEpisodes(parsedEpisodes);
-        console.log(`Successfully loaded ${parsedEpisodes.length} episodes`);
       } catch (error) {
-        console.error("Error fetching RSS feed:", error);
+        console.error("Error fetching episodes:", error);
       } finally {
         setLoading(false);
       }

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { Card } from "@/components/ui/card";
-import gregoryBrenig from "@/assets/gregory-brenig.jpg";
+import gregoryBrenig from "@/assets/gregory-brenig.webp";
 
 const About = () => {
   const { t, i18n } = useTranslation();

@@ -1,1 +1,7 @@
 project_id = "spdqyztepovgolwjdpck"
+
+[functions.send-contact-email]
+verify_jwt = false
+
+[functions.fetch-rss-episodes]
+verify_jwt = false
