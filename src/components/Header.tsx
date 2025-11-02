@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Globe, Menu, X } from "lucide-react";
 import { useState, memo } from "react";
-import podcastLogo from "@/assets/podcast-logo-optimized-small.webp";
+import podcastLogo from "@/assets/podcast-logo-small.webp";
 import ContactFormDialog from "@/components/ContactFormDialog";
 
 const Header = () => {
