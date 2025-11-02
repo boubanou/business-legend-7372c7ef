@@ -9,7 +9,7 @@ interface LiteYouTubeProps {
 const LiteYouTube = ({ videoId, title }: LiteYouTubeProps) => {
   const [isActive, setIsActive] = useState(false);
 
-  const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
+  const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/sddefault.jpg`;
 
   if (isActive) {
     return (
@@ -35,12 +35,14 @@ const LiteYouTube = ({ videoId, title }: LiteYouTubeProps) => {
     >
       <img
         src={thumbnailUrl}
+        srcSet={`https://i.ytimg.com/vi/${videoId}/sddefault.jpg 640w, https://i.ytimg.com/vi/${videoId}/hqdefault.jpg 480w`}
+        sizes="(max-width: 640px) 480px, 640px"
         alt={title}
         className="w-full h-full object-cover"
         loading="eager"
         fetchPriority="high"
-        width="1280"
-        height="720"
+        width="640"
+        height="480"
       />
       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
       <div className="absolute inset-0 flex items-center justify-center">

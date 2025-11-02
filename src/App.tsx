@@ -33,7 +33,7 @@ const App = () => (
           <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow">
-              <Suspense fallback={<div aria-live="polite" role="status" className="sr-only">Loading</div>}>
+              <Suspense fallback={<div aria-live="polite" role="status" className="flex items-center justify-center min-h-[400px]"><span className="sr-only">Loading</span></div>}>
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/partnerships" element={<Partnerships />} />

@@ -22,13 +22,15 @@ const Home = () => {
         
         {/* Preconnect to Cloudflare for geolocation check */}
         <link rel="preconnect" href="https://www.cloudflare.com" />
-        <link rel="preconnect" href="https://i.ytimg.com" />
-        <link 
-          rel="preload" 
-          as="image" 
-          href="https://i.ytimg.com/vi/xlnCbeBAehY/maxresdefault.jpg"
-          fetchPriority="high"
-        />
+      <link rel="preconnect" href="https://i.ytimg.com" />
+      <link 
+        rel="preload" 
+        as="image" 
+        href="https://i.ytimg.com/vi/xlnCbeBAehY/hqdefault.jpg"
+        fetchPriority="high"
+        imageSrcSet="https://i.ytimg.com/vi/xlnCbeBAehY/sddefault.jpg 640w, https://i.ytimg.com/vi/xlnCbeBAehY/hqdefault.jpg 480w"
+        imageSizes="(max-width: 640px) 480px, 640px"
+      />
         
         {/* Preload LCP image */}
         <link rel="preload" as="image" href="https://i.ytimg.com/vi/xlnCbeBAehY/maxresdefault.jpg" fetchPriority="high" />
