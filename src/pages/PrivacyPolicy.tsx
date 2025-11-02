@@ -25,7 +25,7 @@ const PrivacyPolicy = () => {
         <link rel="canonical" href="https://businesslegend.co/privacy-policy" />
       </Helmet>
 
-      <div className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-background pt-24 pb-12 px-4 sm:px-6 lg:px-8">
         <article className="max-w-4xl mx-auto prose prose-invert prose-orange">
           {isFrench ? (
             <>
