@@ -120,9 +120,9 @@ export function CookieConsent() {
 
   return (
     <>
-      {/* Cookie Banner */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 p-4 sm:p-6 bg-[#1E1E1E] border-t border-white/10 shadow-2xl">
-        <div className="max-w-6xl mx-auto">
+      {/* Cookie Banner - Fixed Overlay */}
+      <div className="fixed inset-x-0 bottom-0 z-50 bg-[#1E1E1E] border-t border-white/10 shadow-2xl transform-gpu">
+        <div className="max-w-6xl mx-auto p-4 sm:p-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <div className="flex-1 text-sm text-white/90">
               {bannerText}{' '}
@@ -133,7 +133,7 @@ export function CookieConsent() {
                 {privacyText}
               </a>
             </div>
-            <div className="flex flex-wrap gap-2 sm:gap-3">
+            <div className="flex flex-wrap gap-2 sm:gap-3 shrink-0">
               <Button
                 onClick={handleDecline}
                 variant="outline"

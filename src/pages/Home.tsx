@@ -26,7 +26,7 @@ const Home = () => {
         <link 
           rel="preload" 
           as="image" 
-          href="https://i.ytimg.com/vi/xlnCbeBAehY/sddefault.jpg"
+          href="https://i.ytimg.com/vi/xlnCbeBAehY/hqdefault.jpg"
         />
         
         <meta property="og:title" content={i18n.language === 'fr' ? 'Business Legend Podcast | Entrepreneuriat, Leadership & Inspiration' : 'Business Legend Podcast | Entrepreneurship, Leadership & Inspiration'} />
