@@ -87,7 +87,7 @@ const resources = {
         hostRole: 'Producteur & Animateur',
       },
       contact: {
-        title: 'Contact',
+        title: 'Devenez Partenaire de Business Legend',
         subtitle: 'Discutons de votre projet',
         name: 'Nom',
         email: 'Email',
@@ -192,7 +192,7 @@ const resources = {
         hostRole: 'Producer & Host',
       },
       contact: {
-        title: 'Contact',
+        title: 'Become a Business Legend Partner',
         subtitle: 'Let\'s discuss your project',
         name: 'Name',
         email: 'Email',
