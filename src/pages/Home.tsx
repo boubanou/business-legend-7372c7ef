@@ -100,16 +100,16 @@ const Home = () => {
                 />
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/episodes">
-                  <Button variant="hero" size="lg">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full px-4">
+                <Link to="/episodes" className="w-full sm:w-auto">
+                  <Button variant="hero" size="lg" className="w-full sm:w-auto">
                     {t("home.watchNow")}
                   </Button>
                 </Link>
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="border-secondary-foreground bg-secondary-foreground/10 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary"
+                  className="w-full sm:w-auto border-secondary-foreground bg-secondary-foreground/10 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary"
                   onClick={() => setIsContactDialogOpen(true)}
                 >
                   {t("home.becomePartner")}
