@@ -22,11 +22,10 @@
     
     <!-- Optimized font loading with font-display swap for better performance -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wgt@300;400;500;700&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"></noscript>
     
-    <!-- Preload hero logo image -->
-    <link rel="preload" as="image" href="/assets/podcast-logo-optimized-B-NE-kOo.webp" fetchpriority="high">
+    <!-- Removed logo preload to avoid unnecessary early network work; logo is small and loads eagerly in header -->
 
     <!-- Hreflang for bilingual support -->
     <link rel="alternate" hreflang="fr" href="https://businesslegend.co/" />

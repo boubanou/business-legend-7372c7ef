@@ -22,18 +22,12 @@ const Home = () => {
         
         {/* Preconnect to Cloudflare for geolocation check */}
         <link rel="preconnect" href="https://www.cloudflare.com" />
-      <link rel="preconnect" href="https://i.ytimg.com" />
-      <link 
-        rel="preload" 
-        as="image" 
-        href="https://i.ytimg.com/vi/xlnCbeBAehY/hqdefault.jpg"
-        fetchPriority="high"
-        imageSrcSet="https://i.ytimg.com/vi/xlnCbeBAehY/sddefault.jpg 640w, https://i.ytimg.com/vi/xlnCbeBAehY/hqdefault.jpg 480w"
-        imageSizes="(max-width: 640px) 480px, 640px"
-      />
-        
-        {/* Preload LCP image */}
-        <link rel="preload" as="image" href="https://i.ytimg.com/vi/xlnCbeBAehY/maxresdefault.jpg" fetchPriority="high" />
+        <link rel="preconnect" href="https://i.ytimg.com" />
+        <link 
+          rel="preload" 
+          as="image" 
+          href="https://i.ytimg.com/vi/xlnCbeBAehY/sddefault.jpg"
+        />
         
         <meta property="og:title" content={i18n.language === 'fr' ? 'Business Legend Podcast | Entrepreneuriat, Leadership & Inspiration' : 'Business Legend Podcast | Entrepreneurship, Leadership & Inspiration'} />
         <meta property="og:description" content={i18n.language === 'fr' ? "Le podcast business international francophone qui révèle les parcours inspirants de dirigeants, fondateurs et innovateurs." : "The international French-language business podcast revealing inspiring journeys of executives and founders."} />

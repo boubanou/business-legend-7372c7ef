@@ -40,7 +40,7 @@ const LiteYouTube = ({ videoId, title }: LiteYouTubeProps) => {
         alt={title}
         className="w-full h-full object-cover"
         loading="eager"
-        fetchPriority="high"
+        decoding="async"
         width="640"
         height="480"
       />

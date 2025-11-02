@@ -24,7 +24,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 md:gap-3 hover:opacity-80 transition-opacity" onClick={closeMobileMenu}>
-          <img src={podcastLogo} alt="Business Legend" className="h-12 w-12 md:h-16 md:w-16 object-contain" loading="eager" fetchPriority="high" width="64" height="64" />
+          <img src={podcastLogo} alt="Business Legend" className="h-12 w-12 md:h-16 md:w-16 object-contain" loading="eager" decoding="async" width="64" height="64" />
           <div className="flex flex-col">
             <span className="text-lg md:text-2xl font-bold text-foreground leading-tight">BUSINESS</span>
             <span className="text-lg md:text-2xl font-bold text-primary leading-tight">LEGEND</span>

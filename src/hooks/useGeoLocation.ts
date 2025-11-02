@@ -38,7 +38,16 @@ export function useGeoLocation() {
       }
     };
 
-    checkLocation();
+    const scheduleCheck = () => {
+      if (typeof (window as any).requestIdleCallback === 'function') {
+        (window as any).requestIdleCallback(checkLocation, { timeout: 2000 });
+      } else {
+        setTimeout(checkLocation, 0);
+      }
+    };
+
+    // Defer geolocation to avoid impacting initial render/LCP
+    scheduleCheck();
   }, []);
 
   return { isGDPRCountry, isLoading };
