@@ -23,7 +23,7 @@ const resources = {
         visionTitle: 'Vision',
         visionText: 'Nous croyons que la réussite n\'est pas une destination, mais une trajectoire faite de courage, d\'erreurs et de recommencements.\nNotre mission : inspirer, transmettre et redonner de la profondeur à la réussite.',
         watchNow: 'Regarder maintenant',
-        becomePartner: 'Devenir partenaire',
+        becomePartner: 'Devenir Sponsor',
         stats: {
           top100: 'Top 100 podcasts business Europe',
           global: 'Audience mondiale',
@@ -128,7 +128,7 @@ const resources = {
         visionTitle: 'Vision',
         visionText: 'We believe success isn\'t a destination — it\'s a journey made of courage, mistakes, and reinvention.\nOur mission: to inspire, connect, and give depth back to what success truly means.',
         watchNow: 'Watch now',
-        becomePartner: 'Become a Partner',
+        becomePartner: 'Become a Sponsor',
         stats: {
           top100: 'Top 100 Business Podcasts Europe',
           global: 'Global Audience',
