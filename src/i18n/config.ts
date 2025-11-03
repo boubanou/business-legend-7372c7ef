@@ -87,8 +87,8 @@ const resources = {
         hostRole: 'Producteur & Animateur',
       },
       contact: {
-        title: 'Devenez Partenaire de Business Legend',
-        subtitle: 'Discutons de votre projet',
+        title: 'Devenez sponsor du podcast Business Legend',
+        subtitle: 'Donnez de la visibilité à votre marque auprès de milliers de fondateurs et de dirigeants à travers l\'un des 100 meilleurs podcasts business d\'Europe.',
         name: 'Nom',
         email: 'Email',
         company: 'Entreprise',
@@ -192,8 +192,8 @@ const resources = {
         hostRole: 'Producer & Host',
       },
       contact: {
-        title: 'Become a Business Legend Partner',
-        subtitle: 'Let\'s discuss your project',
+        title: 'Become a Business Legend Sponsor',
+        subtitle: 'Showcase your brand to thousands of founders and executives in the Europe\'s top 100 business podcast',
         name: 'Name',
         email: 'Email',
         company: 'Company',
