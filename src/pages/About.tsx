@@ -12,6 +12,7 @@ const About = () => {
         <title>{i18n.language === 'fr' ? 'À propos de Business Legend | Créé et animé par Gregory Brenig' : 'About Business Legend | Created and hosted by Gregory Brenig'}</title>
         <meta name="description" content={i18n.language === 'fr' ? "Business Legend est un podcast francophone international qui explore la réussite et l'humain derrière les plus grands parcours professionnels. Créé par Gregory Brenig." : "Business Legend is an international French-speaking podcast that explores success and the human behind the greatest professional journeys. Created by Gregory Brenig."} />
         <meta name="keywords" content="Gregory Brenig, podcast business, animateur podcast, podcast leadership, podcast entrepreneur francophone" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href="https://businesslegend.co/about" />
         
         <meta property="og:title" content={i18n.language === 'fr' ? 'À propos de Business Legend | Gregory Brenig' : 'About Business Legend | Gregory Brenig'} />

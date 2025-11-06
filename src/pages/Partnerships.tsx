@@ -51,6 +51,7 @@ const Partnerships = () => {
         <title>{i18n.language === 'fr' ? 'Partenariats Business Legend | Sponsoring Podcast Business' : 'Business Legend Partnerships | Business Podcast Sponsorship'}</title>
         <meta name="description" content={i18n.language === 'fr' ? "Sponsorisez le podcast que les décideurs écoutent. Business Legend offre des opportunités de partenariat premium pour votre marque auprès d'une audience d'élite." : "Sponsor the podcast decision-makers listen to. Business Legend offers premium partnership opportunities for your brand with an elite audience."} />
         <meta name="keywords" content="sponsor podcast, partenariat podcast business, marques partenaires, visibilité média, podcast sponsorship, B2B marketing, brand partnerships" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href="https://businesslegend.co/partnerships" />
         
         <meta property="og:title" content={i18n.language === 'fr' ? 'Partenariats Business Legend | Sponsoring Podcast' : 'Business Legend Partnerships | Podcast Sponsorship'} />

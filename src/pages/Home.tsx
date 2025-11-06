@@ -19,6 +19,7 @@ const Home = () => {
         <title>{i18n.language === 'fr' ? 'Business Legend Podcast | Entrepreneuriat, Leadership & Inspiration' : 'Business Legend Podcast | Entrepreneurship, Leadership & Inspiration'}</title>
         <meta name="description" content={i18n.language === 'fr' ? "Le podcast business international francophone qui révèle les parcours inspirants de dirigeants, fondateurs et innovateurs du monde entier. Interviews filmées sur LinkedIn, Spotify, YouTube." : "The international French-language business podcast revealing inspiring journeys of executives, founders and innovators from around the world. Filmed interviews on LinkedIn, Spotify, YouTube."} />
         <meta name="keywords" content="podcast business, podcast entrepreneur, podcast inspiration, podcast leadership, podcast francophone international, interview dirigeants, podcast carrières inspirantes, business legend podcast" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href="https://businesslegend.co/" />
         
         {/* Preconnect for critical external resources */}

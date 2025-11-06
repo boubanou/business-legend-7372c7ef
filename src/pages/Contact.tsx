@@ -17,6 +17,7 @@ const Contact = () => {
         <title>{i18n.language === 'fr' ? 'Contactez Business Legend | Devenez invité ou partenaire' : 'Contact Business Legend | Become a guest or partner'}</title>
         <meta name="description" content={i18n.language === 'fr' ? "Proposez votre candidature, collaborez ou sponsorisez un épisode du podcast Business Legend. Contactez-nous pour discuter de votre projet." : "Submit your application, collaborate or sponsor a Business Legend podcast episode. Contact us to discuss your project."} />
         <meta name="keywords" content="contact podcast business, invité podcast, partenariat podcast, sponsoring podcast business" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href="https://businesslegend.co/contact" />
         
         <meta property="og:title" content={i18n.language === 'fr' ? 'Contactez Business Legend' : 'Contact Business Legend'} />

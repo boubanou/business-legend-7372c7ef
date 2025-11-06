@@ -54,6 +54,7 @@ const Episodes = () => {
         <title>{i18n.language === 'fr' ? 'Épisodes du Business Legend Podcast | Histoires d\'entrepreneurs et leaders' : 'Business Legend Podcast Episodes | Stories of entrepreneurs and leaders'}</title>
         <meta name="description" content={i18n.language === 'fr' ? "Découvrez des interviews profondes de fondateurs, dirigeants et créateurs d'entreprises qui inspirent le monde des affaires. Podcast business bilingue français-anglais." : "Discover deep interviews with founders, executives and business creators who inspire the business world. Bilingual French-English business podcast."} />
         <meta name="keywords" content="épisodes podcast business, interviews entrepreneurs, podcast leadership, episodes business legend, histoires entrepreneurs" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href="https://businesslegend.co/episodes" />
         
         <meta property="og:title" content={i18n.language === 'fr' ? 'Épisodes Business Legend | Interviews entrepreneurs' : 'Business Legend Episodes | Entrepreneur interviews'} />

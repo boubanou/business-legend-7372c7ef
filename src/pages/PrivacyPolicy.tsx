@@ -22,6 +22,7 @@ const PrivacyPolicy = () => {
               : 'Privacy Policy and personal data protection of Business Legend Podcast, GDPR compliant.'
           }
         />
+        <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href="https://businesslegend.co/privacy-policy" />
       </Helmet>
 
