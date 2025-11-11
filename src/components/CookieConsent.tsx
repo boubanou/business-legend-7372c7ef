@@ -120,8 +120,8 @@ export function CookieConsent() {
 
   return (
     <>
-      {/* Cookie Banner - Fixed Overlay */}
-      <div className="fixed inset-x-0 bottom-0 z-50 bg-[#1E1E1E] border-t border-white/10 shadow-2xl transform-gpu">
+      {/* Cookie Banner - Fixed Overlay (no CLS) */}
+      <div className="fixed inset-x-0 bottom-0 z-50 bg-[#1E1E1E] border-t border-white/10 shadow-2xl" style={{ willChange: 'transform' }}>
         <div className="max-w-6xl mx-auto p-4 sm:p-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <div className="flex-1 text-sm text-white/90">

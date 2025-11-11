@@ -10,22 +10,22 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://businesslegend.co/" />
     
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="google-site-verification=BusinessLegendPodcast2025" />
     
-    <!-- Preconnect for performance -->
+    <!-- Critical preconnect for performance (LCP optimization) -->
+    <link rel="preconnect" href="https://i.ytimg.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="dns-prefetch" href="https://www.youtube.com">
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
-    <link rel="dns-prefetch" href="https://i.ytimg.com">
     
-    <!-- Optimized font loading with font-display swap for better performance -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"></noscript>
-    
-    <!-- Removed logo preload to avoid unnecessary early network work; logo is small and loads eagerly in header -->
+    <!-- Critical font preload with font-display swap -->
+    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" media="all">
 
     <!-- Hreflang for bilingual support -->
     <link rel="alternate" hreflang="fr" href="https://businesslegend.co/" />

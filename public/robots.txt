@@ -1,33 +1,3 @@
-# Business Legend Podcast - Robots.txt
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /admin/
-
-# Sitemap
 Sitemap: https://businesslegend.co/sitemap.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
-# Special rules for major search engines
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Slurp
-Allow: /
-
-# Social media crawlers
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /

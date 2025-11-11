@@ -22,20 +22,12 @@ const Home = () => {
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href="https://businesslegend.co/" />
         
-        {/* Preconnect for critical external resources */}
-        <link rel="preconnect" href="https://www.cloudflare.com" />
-        <link rel="preconnect" href="https://i.ytimg.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://open.spotify.com" />
-        <link rel="dns-prefetch" href="https://podcasts.apple.com" />
-        <link rel="dns-prefetch" href="https://www.deezer.com" />
-        <link rel="dns-prefetch" href="https://music.amazon.fr" />
-        <link rel="dns-prefetch" href="https://www.youtube.com" />
-        <link rel="dns-prefetch" href="https://calendly.com" />
+        {/* LCP optimization - preload hero YouTube thumbnail */}
         <link 
           rel="preload" 
           as="image" 
           href="https://i.ytimg.com/vi/xlnCbeBAehY/hqdefault.jpg"
+          fetchPriority="high"
         />
         
         <meta property="og:title" content={i18n.language === 'fr' ? 'Business Legend Podcast | Entrepreneuriat, Leadership & Inspiration' : 'Business Legend Podcast | Entrepreneurship, Leadership & Inspiration'} />
@@ -101,8 +93,11 @@ const Home = () => {
                 ))}
               </div>
 
-              {/* YouTube Video Embed */}
-              <div className="aspect-video max-w-3xl mx-auto mb-6 md:mb-8 rounded-lg md:rounded-xl overflow-hidden shadow-2xl px-4">
+              {/* YouTube Video Embed - LCP element with explicit dimensions */}
+              <div 
+                className="aspect-video max-w-3xl mx-auto mb-6 md:mb-8 rounded-lg md:rounded-xl overflow-hidden shadow-2xl px-4"
+                style={{ aspectRatio: '16/9' }}
+              >
                 <LiteYouTube
                   videoId="xlnCbeBAehY"
                   title="Business Legend Podcast - Interview entrepreneurs et leaders internationaux"
