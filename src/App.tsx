@@ -44,7 +44,7 @@ const App = () => {
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter>
+          <BrowserRouter basename="/">
             <ScrollToTop />
             <div className="flex flex-col min-h-screen">
               <Header />

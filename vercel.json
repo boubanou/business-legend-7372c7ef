@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -57,11 +63,6 @@
     {
       "source": "/home",
       "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/:path*/",
-      "destination": "/:path*",
       "permanent": true
     }
   ]
