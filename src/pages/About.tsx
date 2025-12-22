@@ -9,9 +9,9 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>{i18n.language === 'fr' ? 'À propos de Business Legend | Créé et animé par Gregory Brenig' : 'About Business Legend | Created and hosted by Gregory Brenig'}</title>
-        <meta name="description" content={i18n.language === 'fr' ? "Business Legend est un podcast francophone international qui explore la réussite et l'humain derrière les plus grands parcours professionnels. Créé par Gregory Brenig." : "Business Legend is an international French-speaking podcast that explores success and the human behind the greatest professional journeys. Created by Gregory Brenig."} />
-        <meta name="keywords" content="Gregory Brenig, podcast business, animateur podcast, podcast leadership, podcast entrepreneur francophone" />
+        <title>{i18n.language === 'fr' ? 'À propos de Business Legend | Marque Média Business & Vision Entrepreneuriale' : 'About Business Legend | Business Media Brand & Entrepreneurial Vision'}</title>
+        <meta name="description" content={i18n.language === 'fr' ? "Découvrez Business Legend, la plateforme média business internationale créée par Gregory Brenig. Vision entrepreneuriale, storytelling authentique et insights stratégiques pour leaders." : "Discover Business Legend, the international business media platform created by Gregory Brenig. Entrepreneurial vision, authentic storytelling and strategic insights for leaders."} />
+        <meta name="keywords" content="business media brand, podcast host Gregory Brenig, entrepreneurial vision, business storytelling, leadership podcast, founder interviews, business influence platform" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href="https://businesslegend.co/about" />
         
