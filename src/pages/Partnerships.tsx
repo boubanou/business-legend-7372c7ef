@@ -48,9 +48,9 @@ const Partnerships = () => {
   return (
     <>
       <Helmet>
-        <title>{i18n.language === 'fr' ? 'Partenariats Business Legend | Sponsoring Podcast Business' : 'Business Legend Partnerships | Business Podcast Sponsorship'}</title>
-        <meta name="description" content={i18n.language === 'fr' ? "Sponsorisez le podcast que les décideurs écoutent. Business Legend offre des opportunités de partenariat premium pour votre marque auprès d'une audience d'élite." : "Sponsor the podcast decision-makers listen to. Business Legend offers premium partnership opportunities for your brand with an elite audience."} />
-        <meta name="keywords" content="sponsor podcast, partenariat podcast business, marques partenaires, visibilité média, podcast sponsorship, B2B marketing, brand partnerships" />
+        <title>{i18n.language === 'fr' ? 'Partenaires Business & Sponsors Podcast | Business Legend' : 'Business Partners & Podcast Sponsors | Business Legend'}</title>
+        <meta name="description" content={i18n.language === 'fr' ? "Devenez partenaire de Business Legend, le podcast business européen de référence. Sponsoring audio, intégrations vidéo et collaborations média sur mesure pour votre marque." : "Become a Business Legend partner, Europe's leading business podcast. Audio sponsorships, video integrations and tailored media collaborations for your brand."} />
+        <meta name="keywords" content="business partners, podcast sponsors, media collaboration, brand visibility, podcast sponsorship, B2B marketing, business influence, media partnership" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href="https://businesslegend.co/partnerships" />
         

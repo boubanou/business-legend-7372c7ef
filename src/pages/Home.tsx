@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { TrendingUp, Globe, Users } from "lucide-react";
+import { TrendingUp, Globe, Users, Target, Handshake, Briefcase, Rocket, LineChart } from "lucide-react";
 import { Link } from "react-router-dom";
 import ContactFormDialog from "@/components/ContactFormDialog";
 import LiteYouTube from "@/components/LiteYouTube";
@@ -13,12 +13,14 @@ const Home = () => {
   const { t, i18n } = useTranslation();
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 
+  const audienceItems = t("home.audienceItems", { returnObjects: true }) as string[];
+
   return (
     <>
       <Helmet>
-        <title>{i18n.language === 'fr' ? 'Business Legend Podcast | Entrepreneuriat, Leadership & Inspiration' : 'Business Legend Podcast | Entrepreneurship, Leadership & Inspiration'}</title>
-        <meta name="description" content={i18n.language === 'fr' ? "Le podcast business international francophone qui révèle les parcours inspirants de dirigeants, fondateurs et innovateurs du monde entier. Interviews filmées sur LinkedIn, Spotify, YouTube." : "The international French-language business podcast revealing inspiring journeys of executives, founders and innovators from around the world. Filmed interviews on LinkedIn, Spotify, YouTube."} />
-        <meta name="keywords" content="podcast business, podcast entrepreneur, podcast inspiration, podcast leadership, podcast francophone international, interview dirigeants, podcast carrières inspirantes, business legend podcast" />
+        <title>{i18n.language === 'fr' ? 'Podcast Business pour Entrepreneurs & Leaders | Business Legend' : 'Business Podcast for Entrepreneurs & Leaders | Business Legend'}</title>
+        <meta name="description" content={i18n.language === 'fr' ? "Business Legend est un podcast business premium & plateforme média partageant des histoires entrepreneuriales puissantes, des insights leadership et des stratégies de croissance." : "Business Legend is a premium business podcast & media platform sharing powerful entrepreneurial stories, leadership insights & growth strategies."} />
+        <meta name="keywords" content="business podcast, entrepreneur podcast, leadership podcast, startup podcast, founder interviews, personal branding, business media platform, executive interviews, growth strategies, entrepreneurship" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href="https://businesslegend.co/" />
         
@@ -30,20 +32,20 @@ const Home = () => {
           fetchPriority="high"
         />
         
-        <meta property="og:title" content={i18n.language === 'fr' ? 'Business Legend Podcast | Entrepreneuriat, Leadership & Inspiration' : 'Business Legend Podcast | Entrepreneurship, Leadership & Inspiration'} />
-        <meta property="og:description" content={i18n.language === 'fr' ? "Le podcast business international francophone qui révèle les parcours inspirants de dirigeants, fondateurs et innovateurs." : "The international French-language business podcast revealing inspiring journeys of executives and founders."} />
+        <meta property="og:title" content={i18n.language === 'fr' ? 'Podcast Business pour Entrepreneurs & Leaders | Business Legend' : 'Business Podcast for Entrepreneurs & Leaders | Business Legend'} />
+        <meta property="og:description" content={i18n.language === 'fr' ? "Le podcast business premium qui partage des histoires entrepreneuriales puissantes et des stratégies de croissance." : "The premium business podcast sharing powerful entrepreneurial stories and growth strategies."} />
         <meta property="og:url" content="https://businesslegend.co/" />
         <meta property="og:type" content="website" />
         
-        <meta name="twitter:title" content={i18n.language === 'fr' ? 'Business Legend Podcast | Entrepreneuriat, Leadership & Inspiration' : 'Business Legend Podcast | Entrepreneurship, Leadership & Inspiration'} />
-        <meta name="twitter:description" content={i18n.language === 'fr' ? "Le podcast business international francophone qui révèle les parcours inspirants de dirigeants, fondateurs et innovateurs." : "The international French-language business podcast revealing inspiring journeys of executives and founders."} />
+        <meta name="twitter:title" content={i18n.language === 'fr' ? 'Podcast Business pour Entrepreneurs & Leaders | Business Legend' : 'Business Podcast for Entrepreneurs & Leaders | Business Legend'} />
+        <meta name="twitter:description" content={i18n.language === 'fr' ? "Le podcast business premium qui partage des histoires entrepreneuriales puissantes." : "The premium business podcast sharing powerful entrepreneurial stories."} />
         
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": i18n.language === 'fr' ? "Business Legend Podcast - Accueil" : "Business Legend Podcast - Home",
-            "description": i18n.language === 'fr' ? "Podcast business international francophone avec interviews de dirigeants et entrepreneurs" : "International French-speaking business podcast with executive and entrepreneur interviews",
+            "name": i18n.language === 'fr' ? "Business Legend - Podcast Business pour Entrepreneurs" : "Business Legend - Business Podcast for Entrepreneurs",
+            "description": i18n.language === 'fr' ? "Plateforme média business premium avec interviews de dirigeants et entrepreneurs" : "Premium business media platform with executive and entrepreneur interviews",
             "url": "https://businesslegend.co/",
             "isPartOf": {
               "@type": "WebSite",
@@ -52,9 +54,20 @@ const Home = () => {
             "about": {
               "@type": "PodcastSeries",
               "name": "Business Legend",
-              "description": i18n.language === 'fr' ? "Podcast business francophone international avec des interviews filmées de fondateurs, dirigeants et innovateurs. Format bilingue français-anglais disponible sur LinkedIn, Spotify, YouTube et Apple Podcasts." : "International French-speaking business podcast with filmed interviews of founders, executives and innovators. Bilingual French-English format available on LinkedIn, Spotify, YouTube and Apple Podcasts.",
-              "genre": ["Business", "Entrepreneuriat", "Leadership", "Innovation"],
+              "description": i18n.language === 'fr' ? "Podcast business international avec des interviews filmées de fondateurs, dirigeants et innovateurs. Format bilingue français-anglais disponible sur LinkedIn, Spotify, YouTube et Apple Podcasts." : "International business podcast with filmed interviews of founders, executives and innovators. Bilingual French-English format available on LinkedIn, Spotify, YouTube and Apple Podcasts.",
+              "genre": ["Business", "Entrepreneurship", "Leadership", "Innovation", "Startup"],
               "inLanguage": ["fr", "en"]
+            },
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Business Legend",
+              "url": "https://businesslegend.co",
+              "logo": "https://businesslegend.co/favicon.ico",
+              "sameAs": [
+                "https://www.linkedin.com/company/business-legend-podcast",
+                "https://www.youtube.com/@BusinessLegendPodcast",
+                "https://open.spotify.com/show/businesslegend"
+              ]
             },
             "breadcrumb": {
               "@type": "BreadcrumbList",
@@ -140,6 +153,61 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Authority Section - SEO Block */}
+        <section className="py-12 md:py-16 bg-background">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6">
+              {t("home.authorityTitle")}
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed text-center">
+              {t("home.authorityText")}
+            </p>
+          </div>
+        </section>
+
+        {/* Audience Section - SEO Block */}
+        <section className="py-12 md:py-16 bg-muted">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8">
+              {t("home.audienceTitle")}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 max-w-3xl mx-auto">
+              {audienceItems.map((item, index) => {
+                const icons = [Briefcase, Target, Rocket, LineChart, Handshake];
+                const Icon = icons[index % icons.length];
+                return (
+                  <div key={index} className="flex items-center gap-3 p-4 bg-background rounded-lg border border-border/50">
+                    <Icon className="h-5 w-5 text-primary flex-shrink-0" aria-hidden="true" />
+                    <span className="font-medium">{item}</span>
+                  </div>
+                );
+              })}
+            </div>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed text-center">
+              {t("home.audienceText")}
+            </p>
+          </div>
+        </section>
+
+        {/* Partner Section - SEO Block */}
+        <section className="py-12 md:py-16 bg-gradient-to-br from-primary/5 to-primary/10">
+          <div className="container mx-auto px-4 max-w-4xl text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
+              {t("home.partnerTitle")}
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8">
+              {t("home.partnerText")}
+            </p>
+            <Button 
+              variant="default" 
+              size="lg"
+              onClick={() => setIsContactDialogOpen(true)}
+            >
+              {t("home.becomePartner")}
+            </Button>
+          </div>
+        </section>
+
         {/* Stats Section */}
         <section className="py-12 md:py-20 bg-background">
           <div className="container mx-auto px-4">
@@ -148,24 +216,24 @@ const Home = () => {
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
                   <TrendingUp className="h-8 w-8 text-primary" aria-hidden="true" />
                 </div>
-                <h2 className="text-xl font-bold mb-2">{t("home.stats.top100")}</h2>
+                <h3 className="text-xl font-bold mb-2">{t("home.stats.top100")}</h3>
                 <p className="text-muted-foreground">Premium business content</p>
               </Card>
 
-              <Card className="p-8 text-center hover:shadow-lg transition-shadow border-primary/20">
+              <Card className="p-6 md:p-8 text-center hover:shadow-lg transition-shadow border-primary/20">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
                   <Globe className="h-8 w-8 text-primary" aria-hidden="true" />
                 </div>
-                <h2 className="text-xl font-bold mb-2">{t("home.stats.global")}</h2>
-                <p className="text-muted-foreground">+120 Pays</p>
+                <h3 className="text-xl font-bold mb-2">{t("home.stats.global")}</h3>
+                <p className="text-muted-foreground">+120 {i18n.language === 'fr' ? 'Pays' : 'Countries'}</p>
               </Card>
 
-              <Card className="p-8 text-center hover:shadow-lg transition-shadow border-primary/20">
+              <Card className="p-6 md:p-8 text-center hover:shadow-lg transition-shadow border-primary/20">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
                   <Users className="h-8 w-8 text-primary" aria-hidden="true" />
                 </div>
-                <h2 className="text-xl font-bold mb-2">{t("home.stats.balanced")}</h2>
-                <p className="text-muted-foreground">Founders, investors, executives</p>
+                <h3 className="text-xl font-bold mb-2">{t("home.stats.balanced")}</h3>
+                <p className="text-muted-foreground">{i18n.language === 'fr' ? 'Fondateurs, investisseurs, dirigeants' : 'Founders, investors, executives'}</p>
               </Card>
             </div>
 

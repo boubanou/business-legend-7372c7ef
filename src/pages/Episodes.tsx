@@ -51,9 +51,9 @@ const Episodes = () => {
   return (
     <>
       <Helmet>
-        <title>{i18n.language === 'fr' ? 'Épisodes du Business Legend Podcast | Histoires d\'entrepreneurs et leaders' : 'Business Legend Podcast Episodes | Stories of entrepreneurs and leaders'}</title>
-        <meta name="description" content={i18n.language === 'fr' ? "Découvrez des interviews profondes de fondateurs, dirigeants et créateurs d'entreprises qui inspirent le monde des affaires. Podcast business bilingue français-anglais." : "Discover deep interviews with founders, executives and business creators who inspire the business world. Bilingual French-English business podcast."} />
-        <meta name="keywords" content="épisodes podcast business, interviews entrepreneurs, podcast leadership, episodes business legend, histoires entrepreneurs" />
+        <title>{i18n.language === 'fr' ? 'Épisodes Podcast Business | Interviews Entrepreneurs | Business Legend' : 'Business Podcast Episodes | Entrepreneur Interviews | Business Legend'}</title>
+        <meta name="description" content={i18n.language === 'fr' ? "Explorez notre collection d'interviews exclusives avec des entrepreneurs, fondateurs et leaders du monde entier. Chaque épisode vous plonge dans le parcours authentique de ceux qui construisent le futur du business." : "Explore our collection of exclusive interviews with entrepreneurs, founders, and leaders from around the world. Each episode immerses you in the authentic journey of those building the future of business."} />
+        <meta name="keywords" content="business podcast episodes, entrepreneur interviews, founder stories, leadership podcast, startup interviews, CEO interviews, business conversations, executive insights" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href="https://businesslegend.co/episodes" />
         
