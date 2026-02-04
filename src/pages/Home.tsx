@@ -18,66 +18,120 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>{i18n.language === 'fr' ? 'Podcast Business pour Entrepreneurs & Leaders | Business Legend' : 'Business Podcast for Entrepreneurs & Leaders | Business Legend'}</title>
-        <meta name="description" content={i18n.language === 'fr' ? "Business Legend est un podcast business premium & plateforme média partageant des histoires entrepreneuriales puissantes, des insights leadership et des stratégies de croissance." : "Business Legend is a premium business podcast & media platform sharing powerful entrepreneurial stories, leadership insights & growth strategies."} />
-        <meta name="keywords" content="business podcast, entrepreneur podcast, leadership podcast, startup podcast, founder interviews, personal branding, business media platform, executive interviews, growth strategies, entrepreneurship" />
+        <title>{i18n.language === 'fr' ? 'Podcast Business #1 Europe | Sponsors & Partenaires | Business Legend' : 'Top Business Podcast Europe | Sponsors & Partners | Business Legend'}</title>
+        <meta name="description" content={i18n.language === 'fr' ? "Business Legend : podcast business Top 100 Europe. +120 pays, 50K+ auditeurs/mois. Sponsoring premium pour marques B2B, startups et entreprises. Devenez sponsor." : "Business Legend: Top 100 European business podcast. 120+ countries, 50K+ monthly listeners. Premium sponsorship for B2B brands, startups & enterprises. Become a sponsor."} />
+        <meta name="keywords" content="podcast business sponsoring, sponsor podcast entrepreneur, partenariat podcast business, publicité podcast B2B, podcast leadership Europe, interview CEO podcast, podcast fondateurs startups, brand visibility podcast, podcast marketing B2B, business podcast advertising, sponsor business podcast, podcast executive audience, media partnership podcast" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href="https://businesslegend.co/" />
         
-        {/* LCP optimization - preload hero YouTube thumbnail */}
-        <link 
-          rel="preload" 
-          as="image" 
-          href="https://i.ytimg.com/vi/xlnCbeBAehY/hqdefault.jpg"
-          fetchPriority="high"
-        />
+        <link rel="preload" as="image" href="https://i.ytimg.com/vi/xlnCbeBAehY/hqdefault.jpg" fetchPriority="high" />
         
-        <meta property="og:title" content={i18n.language === 'fr' ? 'Podcast Business pour Entrepreneurs & Leaders | Business Legend' : 'Business Podcast for Entrepreneurs & Leaders | Business Legend'} />
-        <meta property="og:description" content={i18n.language === 'fr' ? "Le podcast business premium qui partage des histoires entrepreneuriales puissantes et des stratégies de croissance." : "The premium business podcast sharing powerful entrepreneurial stories and growth strategies."} />
+        <meta property="og:title" content={i18n.language === 'fr' ? 'Sponsorisez le Podcast Business #1 en Europe | Business Legend' : 'Sponsor Europe\'s #1 Business Podcast | Business Legend'} />
+        <meta property="og:description" content={i18n.language === 'fr' ? "Visibilité premium pour votre marque auprès de 50K+ décideurs dans 120 pays. Sponsoring podcast business." : "Premium visibility for your brand to 50K+ decision-makers in 120 countries. Business podcast sponsorship."} />
         <meta property="og:url" content="https://businesslegend.co/" />
         <meta property="og:type" content="website" />
         
-        <meta name="twitter:title" content={i18n.language === 'fr' ? 'Podcast Business pour Entrepreneurs & Leaders | Business Legend' : 'Business Podcast for Entrepreneurs & Leaders | Business Legend'} />
-        <meta name="twitter:description" content={i18n.language === 'fr' ? "Le podcast business premium qui partage des histoires entrepreneuriales puissantes." : "The premium business podcast sharing powerful entrepreneurial stories."} />
+        <meta name="twitter:title" content={i18n.language === 'fr' ? 'Sponsorisez Business Legend | Podcast Business Europe' : 'Sponsor Business Legend | European Business Podcast'} />
+        <meta name="twitter:description" content={i18n.language === 'fr' ? "Le podcast des décideurs. Sponsoring premium pour marques ambitieuses." : "The decision-makers' podcast. Premium sponsorship for ambitious brands."} />
         
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": i18n.language === 'fr' ? "Business Legend - Podcast Business pour Entrepreneurs" : "Business Legend - Business Podcast for Entrepreneurs",
-            "description": i18n.language === 'fr' ? "Plateforme média business premium avec interviews de dirigeants et entrepreneurs" : "Premium business media platform with executive and entrepreneur interviews",
-            "url": "https://businesslegend.co/",
-            "isPartOf": {
-              "@type": "WebSite",
-              "@id": "https://businesslegend.co/#website"
-            },
-            "about": {
-              "@type": "PodcastSeries",
-              "name": "Business Legend",
-              "description": i18n.language === 'fr' ? "Podcast business international avec des interviews filmées de fondateurs, dirigeants et innovateurs. Format bilingue français-anglais disponible sur LinkedIn, Spotify, YouTube et Apple Podcasts." : "International business podcast with filmed interviews of founders, executives and innovators. Bilingual French-English format available on LinkedIn, Spotify, YouTube and Apple Podcasts.",
-              "genre": ["Business", "Entrepreneurship", "Leadership", "Innovation", "Startup"],
-              "inLanguage": ["fr", "en"]
-            },
-            "mainEntity": {
-              "@type": "Organization",
-              "name": "Business Legend",
-              "url": "https://businesslegend.co",
-              "logo": "https://businesslegend.co/favicon.ico",
-              "sameAs": [
-                "https://www.linkedin.com/company/business-legend-podcast",
-                "https://www.youtube.com/@BusinessLegendPodcast",
-                "https://open.spotify.com/show/businesslegend"
-              ]
-            },
-            "breadcrumb": {
-              "@type": "BreadcrumbList",
-              "itemListElement": [{
-                "@type": "ListItem",
-                "position": 1,
-                "name": i18n.language === 'fr' ? "Accueil" : "Home",
-                "item": "https://businesslegend.co/"
-              }]
-            }
+            "@graph": [
+              {
+                "@type": "WebPage",
+                "@id": "https://businesslegend.co/#webpage",
+                "url": "https://businesslegend.co/",
+                "name": i18n.language === 'fr' ? "Business Legend - Podcast Business Top 100 Europe" : "Business Legend - Top 100 European Business Podcast",
+                "description": i18n.language === 'fr' ? "Podcast business premium avec opportunités de sponsoring pour marques B2B" : "Premium business podcast with sponsorship opportunities for B2B brands",
+                "isPartOf": { "@id": "https://businesslegend.co/#website" },
+                "primaryImageOfPage": { "@id": "https://businesslegend.co/#primaryimage" },
+                "datePublished": "2024-01-01",
+                "dateModified": "2025-02-04"
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://businesslegend.co/#website",
+                "url": "https://businesslegend.co",
+                "name": "Business Legend",
+                "description": i18n.language === 'fr' ? "Plateforme média et podcast business international" : "International business podcast and media platform",
+                "publisher": { "@id": "https://businesslegend.co/#organization" },
+                "inLanguage": ["fr", "en"]
+              },
+              {
+                "@type": "Organization",
+                "@id": "https://businesslegend.co/#organization",
+                "name": "Business Legend",
+                "url": "https://businesslegend.co",
+                "logo": {
+                  "@type": "ImageObject",
+                  "@id": "https://businesslegend.co/#logo",
+                  "url": "https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1761834119300-Podcast Logo.png",
+                  "width": 1200,
+                  "height": 630
+                },
+                "sameAs": [
+                  "https://www.linkedin.com/company/business-legend-podcast",
+                  "https://www.youtube.com/@businesslegend-g8g",
+                  "https://open.spotify.com/show/1FaH8oLslZzgULdQRYJNSz",
+                  "https://podcasts.apple.com/au/podcast/business-legend/id1791395807"
+                ],
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "email": "contact@businesslegend.co",
+                  "contactType": i18n.language === 'fr' ? "Partenariats & Sponsoring" : "Partnerships & Sponsorship",
+                  "availableLanguage": ["French", "English"]
+                }
+              },
+              {
+                "@type": "PodcastSeries",
+                "@id": "https://businesslegend.co/#podcast",
+                "name": "Business Legend",
+                "description": i18n.language === 'fr' ? "Podcast business bilingue FR/EN diffusé dans 120+ pays. Interviews filmées de fondateurs, dirigeants et investisseurs." : "Bilingual FR/EN business podcast broadcast in 120+ countries. Filmed interviews with founders, executives and investors.",
+                "url": "https://businesslegend.co",
+                "webFeed": "https://anchor.fm/s/100214854/podcast/rss",
+                "author": { "@type": "Person", "name": "Gregory Brenig" },
+                "genre": ["Business", "Entrepreneurship", "Leadership", "Startups"],
+                "inLanguage": ["fr", "en"],
+                "audience": {
+                  "@type": "Audience",
+                  "audienceType": i18n.language === 'fr' ? "Entrepreneurs, Fondateurs, Dirigeants, Investisseurs" : "Entrepreneurs, Founders, Executives, Investors",
+                  "geographicArea": { "@type": "Place", "name": "International - 120+ countries" }
+                }
+              },
+              {
+                "@type": "Service",
+                "@id": "https://businesslegend.co/#sponsorship",
+                "name": i18n.language === 'fr' ? "Sponsoring Podcast Business Legend" : "Business Legend Podcast Sponsorship",
+                "serviceType": i18n.language === 'fr' ? "Sponsoring Podcast & Partenariat Média" : "Podcast Sponsorship & Media Partnership",
+                "provider": { "@id": "https://businesslegend.co/#organization" },
+                "description": i18n.language === 'fr' ? "Opportunités de sponsoring premium pour atteindre 50K+ décideurs par mois dans 120 pays" : "Premium sponsorship opportunities to reach 50K+ decision-makers monthly across 120 countries",
+                "areaServed": "International",
+                "audience": {
+                  "@type": "Audience",
+                  "audienceType": i18n.language === 'fr' ? "Marques B2B, Startups, Entreprises, Agences" : "B2B Brands, Startups, Enterprises, Agencies"
+                },
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": i18n.language === 'fr' ? "Formats de Sponsoring" : "Sponsorship Formats",
+                  "itemListElement": [
+                    { "@type": "Offer", "name": "Pre-Roll (15s)" },
+                    { "@type": "Offer", "name": "Host-Read Integration" },
+                    { "@type": "Offer", "name": i18n.language === 'fr' ? "Épisode Exclusif" : "Exclusive Episode" },
+                    { "@type": "Offer", "name": "Co-branded Shorts" }
+                  ]
+                }
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [{
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": i18n.language === 'fr' ? "Accueil" : "Home",
+                  "item": "https://businesslegend.co/"
+                }]
+              }
+            ]
           })}
         </script>
         
