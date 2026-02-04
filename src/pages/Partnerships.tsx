@@ -48,19 +48,19 @@ const Partnerships = () => {
   return (
     <>
       <Helmet>
-        <title>{i18n.language === 'fr' ? 'Partenaires Business & Sponsors Podcast | Business Legend' : 'Business Partners & Podcast Sponsors | Business Legend'}</title>
-        <meta name="description" content={i18n.language === 'fr' ? "Devenez partenaire de Business Legend, le podcast business européen de référence. Sponsoring audio, intégrations vidéo et collaborations média sur mesure pour votre marque." : "Become a Business Legend partner, Europe's leading business podcast. Audio sponsorships, video integrations and tailored media collaborations for your brand."} />
-        <meta name="keywords" content="business partners, podcast sponsors, media collaboration, brand visibility, podcast sponsorship, B2B marketing, business influence, media partnership" />
+        <title>{i18n.language === 'fr' ? 'Sponsoring Podcast Business | Tarifs & Formats | Business Legend' : 'Business Podcast Sponsorship | Rates & Formats | Business Legend'}</title>
+        <meta name="description" content={i18n.language === 'fr' ? "Sponsorisez Business Legend : 50K+ auditeurs/mois, 120 pays, audience dirigeants & fondateurs. Pre-roll, host-read, épisode exclusif. Demandez le media kit." : "Sponsor Business Legend: 50K+ listeners/month, 120 countries, executive & founder audience. Pre-roll, host-read, exclusive episode. Request media kit."} />
+        <meta name="keywords" content="sponsoring podcast business, tarif sponsoring podcast, publicité podcast entrepreneur, partenariat podcast B2B, sponsor podcast leadership, prix pub podcast, podcast advertising rates, business podcast CPM, sponsor startup podcast, podcast media kit, B2B podcast marketing, executive podcast audience" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href="https://businesslegend.co/partnerships" />
         
-        <meta property="og:title" content={i18n.language === 'fr' ? 'Partenariats Business Legend | Sponsoring Podcast' : 'Business Legend Partnerships | Podcast Sponsorship'} />
-        <meta property="og:description" content={i18n.language === 'fr' ? "Opportunités de partenariat premium avec le podcast business le plus innovant d'Europe" : "Premium partnership opportunities with Europe's most innovative business podcast"} />
+        <meta property="og:title" content={i18n.language === 'fr' ? 'Sponsoring Podcast Business Legend | Media Kit 2025' : 'Business Legend Podcast Sponsorship | Media Kit 2025'} />
+        <meta property="og:description" content={i18n.language === 'fr' ? "Visibilité premium auprès de 50K+ décideurs. Téléchargez le media kit." : "Premium visibility to 50K+ decision-makers. Download the media kit."} />
         <meta property="og:url" content="https://businesslegend.co/partnerships" />
         <meta property="og:type" content="website" />
         
-        <meta name="twitter:title" content={i18n.language === 'fr' ? 'Partenariats Business Legend' : 'Business Legend Partnerships'} />
-        <meta name="twitter:description" content={i18n.language === 'fr' ? "Sponsorisez le podcast que les décideurs écoutent" : "Sponsor the podcast decision-makers listen to"} />
+        <meta name="twitter:title" content={i18n.language === 'fr' ? 'Sponsoring Podcast Business Legend' : 'Business Legend Podcast Sponsorship'} />
+        <meta name="twitter:description" content={i18n.language === 'fr' ? "Audience premium de dirigeants dans 120 pays" : "Premium executive audience in 120 countries"} />
         
         <script type="application/ld+json">
           {JSON.stringify({
